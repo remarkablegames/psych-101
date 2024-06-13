@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/remarkablegames/psych-101/master/game/gui/window_icon.png" alt="Ren'Py Template">
+  <img src="https://raw.githubusercontent.com/remarkablegames/psych-101/master/game/gui/window_icon.png" alt="Psych 101">
 </p>
 
-# psych-101
+# Psych 101
 
-📖 Write visual novels with Ren'Py Template.
+📖 Play as a student attending Psych 101 class.
 
 Play the game on:
 
@@ -21,16 +21,6 @@ Clone the repository to the `Projects Directory`:
 ```sh
 git clone https://github.com/remarkablegames/psych-101.git
 cd psych-101
-```
-
-Rename the project:
-
-```sh
-git grep -l 'Psych 101' | xargs sed -i '' -e 's/Psych 101/Psych 101/g'
-```
-
-```sh
-git grep -l 'Psych 101' | xargs sed -i '' -e 's/psych-101/psych-101/g'
 ```
 
 ## Run
