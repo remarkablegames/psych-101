@@ -1,6 +1,6 @@
 ﻿# Declare characters used by this game.
-define alex = Character("Alex", color="#c8ffc8")
 define player = Character("[player_name]", color="#c8c8ff")
+define teacher = Character("Teacher", color="#c8ffc8")
 
 # Variables.
 default affection = 0
@@ -14,7 +14,7 @@ label start:
     with fade
 
     # Show a character sprite.
-    show sylvie blue normal
+    show teacher neutral 1
     with dissolve
 
     # Ask player for name.
@@ -28,25 +28,26 @@ label start:
         else:
             affection += 1
 
-    show sylvie blue giggle
+    show teacher smile 2
 
     # Display lines of dialogue.
-    alex "Nice to meet you, [player_name]!"
-    alex "[player_name], do you want the good or bad ending?"
+    teacher "Nice to meet you, [player_name]!"
+    teacher "[player_name], do you want the good or bad ending?"
+
+    show teacher smile 1
 
     menu:
         "Good ending.":
             $ affection += 1
-            show sylvie blue smile
             jump good_ending
 
         "Bad ending.":
             $ affection -= 1
-            show sylvie blue surprised
             jump bad_ending
 
 label good_ending:
     if affection > 0:
+        show teacher smile 4
         "Affection: [affection]"
 
     scene black
@@ -58,6 +59,7 @@ label good_ending:
 
 label bad_ending:
     if affection < 0:
+        show teacher sad 2
         "Affection: [affection]"
 
     scene black

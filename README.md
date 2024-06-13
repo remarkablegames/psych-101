@@ -14,6 +14,10 @@ Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/psych-101)
 
+## Credits
+
+- [Withoutpenorpaper](https://witpop.itch.io/sprite-pack-female-pink-hair)
+
 ## Prerequisites
 
 - [Ren'Py SDK](https://www.renpy.org/latest.html)
