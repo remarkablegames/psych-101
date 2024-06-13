@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/remarkablegames/renpy-template/master/game/gui/window_icon.png" alt="Ren'Py Template">
+  <img src="https://raw.githubusercontent.com/remarkablegames/psych-101/master/game/gui/window_icon.png" alt="Ren'Py Template">
 </p>
 
-# renpy-template
+# psych-101
 
 📖 Write visual novels with Ren'Py Template.
 
 Play the game on:
 
-- [remarkablegames](https://remarkablegames.org/renpy-template)
+- [remarkablegames](https://remarkablegames.org/psych-101)
 
 ## Prerequisites
 
@@ -19,18 +19,18 @@ Play the game on:
 Clone the repository to the `Projects Directory`:
 
 ```sh
-git clone https://github.com/remarkablegames/renpy-template.git
-cd renpy-template
+git clone https://github.com/remarkablegames/psych-101.git
+cd psych-101
 ```
 
 Rename the project:
 
 ```sh
-git grep -l 'Renpy Template' | xargs sed -i '' -e 's/Renpy Template/My Novel/g'
+git grep -l 'Psych 101' | xargs sed -i '' -e 's/Psych 101/Psych 101/g'
 ```
 
 ```sh
-git grep -l 'Renpy Template' | xargs sed -i '' -e 's/renpy-template/my-novel/g'
+git grep -l 'Psych 101' | xargs sed -i '' -e 's/psych-101/psych-101/g'
 ```
 
 ## Run
@@ -46,7 +46,7 @@ cd path/to/renpy-sdk
 Launch the project:
 
 ```sh
-./renpy.sh path/to/renpy-template
+./renpy.sh path/to/psych-101
 ```
 
 ### GUI
@@ -57,7 +57,7 @@ Open `Ren'Py Launcher`:
 ./renpy.sh launcher
 ```
 
-Click `refresh` and select `renpy-template`
+Click `refresh` and select `psych-101`
 
 Click `Launch Project`
 
