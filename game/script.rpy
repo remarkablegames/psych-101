@@ -5,6 +5,10 @@ define teacher = Character("Teacher", color="#c8ffc8")
 # Variables.
 default affection = 0
 
+# Transforms.
+transform halfsize: 
+    zoom 0.5
+
 # The game starts here.
 label start:
     "I see a cute girl walking up to me..."
@@ -14,7 +18,7 @@ label start:
     with fade
 
     # Show a character sprite.
-    show teacher neutral 1
+    show teacher neutral 1 at halfsize, center
     with dissolve
 
     # Ask player for name.
@@ -28,13 +32,13 @@ label start:
         else:
             affection += 1
 
-    show teacher smile 2
+    show teacher smile 2 at halfsize, center
 
     # Display lines of dialogue.
     teacher "Nice to meet you, [player_name]!"
     teacher "[player_name], do you want the good or bad ending?"
 
-    show teacher smile 1
+    show teacher smile 1 at halfsize, center
 
     menu:
         "Good ending.":
@@ -47,7 +51,7 @@ label start:
 
 label good_ending:
     if affection > 0:
-        show teacher smile 4
+        show teacher smile 4 at halfsize, center
         "Affection: [affection]"
 
     scene black
@@ -59,7 +63,7 @@ label good_ending:
 
 label bad_ending:
     if affection < 0:
-        show teacher sad 2
+        show teacher sad 2 at halfsize, center
         "Affection: [affection]"
 
     scene black
