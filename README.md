@@ -4,6 +4,10 @@
 
 # Psych 101
 
+![release](https://img.shields.io/github/v/release/remarkablegames/psych-101)
+[![build](https://github.com/remarkablegames/psych-101/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/psych-101/actions/workflows/build.yml)
+[![lint](https://github.com/remarkablegames/psych-101/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/psych-101/actions/workflows/lint.yml)
+
 📖 Play as a student attending Psych 101 class.
 
 Play the game on:
