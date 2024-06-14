@@ -48,18 +48,18 @@ label start:
     show classmate sad at left
 
     player "Hey Alex, you okay? You seem a bit off today."
-    teacher "(sighs) Just dealing with some stuff. It's been a tough week."
+    classmate "(sighs) Just dealing with some stuff. It's been a tough week."
 
     menu:
         "If you need to talk, I'm here for you.":
             $ affection += 1
             player "If you need to talk, I'm here for you."
-            teacher "Thanks. I appreciate it."
+            classmate "Thanks. I appreciate it."
 
         "We all have tough weeks, you'll get through it.":
             $ affection -= 1
             player "We all have tough weeks, you'll get through it."
-            teacher "Yeah, I guess..."
+            classmate "Yeah, I guess..."
 
 
     show teacher neutral at halfsize, right
@@ -72,7 +72,7 @@ label start:
     show teacher frustrated at halfsize, left
 
     "Later, in the hallway, you overhear Alex talking to another student."
-    teacher "(frustrated) I don't know what to do anymore. It just feels like everything is falling apart."
+    classmate "(frustrated) I don't know what to do anymore. It just feels like everything is falling apart."
 
     show player neutral at halfsize, right
 
@@ -80,31 +80,31 @@ label start:
         "Alex, I overheard what you were saying. Do you want to talk about it?":
             $ affection += 1
             player "Alex, I overheard what you were saying. Do you want to talk about it?"
-            teacher "It's just... everything feels so heavy. My family is going through a lot, and I've been feeling really low."
+            classmate "It's just... everything feels so heavy. My family is going through a lot, and I've been feeling really low."
 
         "Maybe you should try to relax and take it easy.":
             $ affection -= 1
             player "Maybe you should try to relax and take it easy."
-            teacher "I wish it were that simple..."
+            classmate "I wish it were that simple..."
 
     player "I'm really sorry to hear that. Have you considered talking to the school counselor? They might be able to help."
-    teacher "Maybe... I just don't know if it will change anything."
+    classmate "Maybe... I just don't know if it will change anything."
     player "It's worth a try. Sometimes just talking to someone can make a big difference."
-    teacher "Thanks. I appreciate it."
+    classmate "Thanks. I appreciate it."
 
     scene bg meadow
     with dissolve
 
     "Later that evening, you check social media and see a post from Alex."
-    teacher "Sometimes I wonder if it's all worth it. Life just feels like one big mess."
+    classmate "Sometimes I wonder if it's all worth it. Life just feels like one big mess."
 
     menu:
         "Hey, I saw your post. I'm really concerned about you. Please, let's talk.":
             $ affection += 1
             player "Hey, I saw your post. I'm really concerned about you. Please, let's talk."
-            teacher "(after a pause) Thanks for reaching out. I'm just really struggling right now."
+            classmate "(after a pause) Thanks for reaching out. I'm just really struggling right now."
             player "Remember what we talked about today? Maybe talking to the counselor could help. I can go with you if you want."
-            teacher "Okay. Maybe tomorrow."
+            classmate "Okay. Maybe tomorrow."
 
         "Ignore the post.":
             $ affection -= 1
@@ -132,7 +132,7 @@ label good_ending:
 
     show teacher tired at halfsize, left
 
-    teacher "I'm sorry I'm late. I had an appointment with the counselor this morning."
+    classmate "I'm sorry I'm late. I had an appointment with the counselor this morning."
     player "(thinking) Thank goodness she's okay."
 
 label bad_ending:
