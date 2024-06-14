@@ -22,7 +22,7 @@ label start:
     with fade
 
     # Show a character sprite.
-    show teacher neutral 1 at scale(0.6), center
+    show teacher neutral at scale(0.6), center
     with dissolve
 
     # Ask the player for a name.
@@ -32,18 +32,16 @@ label start:
 
         if not player_name:
             player_name = "Player"
-            affection -= 1
-        else:
-            affection += 1
 
-    show teacher smile 1 at scale(0.6), center
+    show teacher smile at scale(0.6), center
 
     # Display lines of dialogue.
-    teacher "Nice to meet you, [player_name]! Today, we're going to go through a few questions to understand how you're feeling. This will help us support you better."
+    teacher "Nice to meet you, [player_name]!"
+    teacher "I'm going to ask a few questions to understand how you're feeling. This will help me support you better."
     teacher "Let's start. On a scale of 1 to 10, how often do you feel anxious or worried?"
 
     # This is where the player will take a Myers-Briggs test.
-    teacher "Great, thank you for your honesty. This will help us understand your needs. Remember, it's important to take care of your mental health just as you would your physical health."
+    teacher "Thank you for your honesty. Remember that taking care of your mental health is just as important as taking care of your physical health."
 
     scene bg lecturehall
     with dissolve
@@ -64,7 +62,7 @@ label start:
             $ affection -= 1
             classmate "Yeah, I guess..."
 
-    show teacher neutral 1 at scale(0.6), right
+    show teacher normal at scale(0.6), right
 
     "Class begins, but you can't help but notice Alex's distracted state. The teacher discusses the importance of mental health awareness, which resonates deeply with the you."
 
@@ -100,8 +98,8 @@ label start:
     menu:
         "Hey, I saw your post. I'm really concerned about you. Please, let's talk.":
             $ affection += 1
-            player "Hey, I saw your post. I'm really concerned about you. Please, let's talk."
-            classmate "(after a pause) Thanks for reaching out. I'm just really struggling right now."
+            classmate "..."
+            classmate "Thanks for reaching out. I'm just really struggling right now."
             player "Remember what we talked about today? Maybe talking to the counselor could help. I can go with you if you want."
             classmate "Okay. Maybe tomorrow."
 
@@ -121,9 +119,9 @@ label start:
 
 label good_ending:
     if affection > 0:
-        show teacher smile 2 at scale(0.6), center
+        show teacher happy at scale(0.6), center
 
-    show teacher sad 2 at scale(0.6), right
+    show teacher sadder at scale(0.6), right
 
     teacher "I don't know how to say this, but unfortunately, one of our classmates took her own life last night."
     player "(thinking) No, it can't be her. Please don't be her."
@@ -133,6 +131,13 @@ label good_ending:
 
     classmate "I'm sorry I'm late. I had an appointment with the counselor this morning."
     player "(thinking) Thank goodness she's okay."
+
+    scene black
+    with dissolve
+
+    "{b}Good Ending{/b}."
+
+    return
 
 label bad_ending:
     if affection < 0:
