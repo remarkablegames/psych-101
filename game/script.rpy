@@ -33,7 +33,7 @@ label start:
         else:
             affection += 1
 
-    show teacher smile at halfsize, center
+    show teacher smile 1 at halfsize, center
 
     # Display lines of dialogue.
     teacher "Nice to meet you, [player_name]! Today, we're going to go through a few questions to understand how you're feeling. This will help us support you better."
@@ -62,19 +62,17 @@ label start:
             classmate "Yeah, I guess..."
 
 
-    show teacher neutral at halfsize, right
+    show teacher neutral 1 at halfsize, right
 
     "Class begins, but you can't help but notice Alex's distracted state. The teacher discusses the importance of mental health awareness, which resonates deeply with the you."
 
     scene bg club
     with dissolve
 
-    show teacher frustrated at halfsize, left
+    show teacher annoyed 1 at halfsize, left
 
     "Later, in the hallway, you overhear Alex talking to another student."
     classmate "(frustrated) I don't know what to do anymore. It just feels like everything is falling apart."
-
-    show player neutral at halfsize, right
 
     menu:
         "Alex, I overheard what you were saying. Do you want to talk about it?":
@@ -122,15 +120,15 @@ label start:
 
 label good_ending:
     if affection > 0:
-        show teacher smile at halfsize, center
-        "Affection: [affection]"
-    show teacher sad at halfsize, right
+        show teacher smile 2 at halfsize, center
+
+    show teacher sad 2 at halfsize, right
 
     teacher "I don't know how to say this, but unfortunately, one of our classmates took her own life last night."
     player "(thinking) No, it can't be her. Please don't be her."
     teacher "For the privacy of the individual, we're currently not able to say who it was. But please be respectful for the time being."
 
-    show teacher tired at halfsize, left
+    show classmate smile at halfsize, left
 
     classmate "I'm sorry I'm late. I had an appointment with the counselor this morning."
     player "(thinking) Thank goodness she's okay."
