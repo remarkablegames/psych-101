@@ -7,8 +7,11 @@ define teacher = Character("Teacher", color="#faf0e6")
 default affection = 0
 
 # Transforms.
-transform halfsize: 
-    zoom 0.5
+transform flip():
+    xzoom -1.0
+
+transform scale(ratio):
+    zoom ratio
 
 # The game starts here.
 label start:
@@ -19,10 +22,10 @@ label start:
     with fade
 
     # Show a character sprite.
-    show teacher neutral 1 at halfsize, center
+    show teacher neutral 1 at scale(0.6), center
     with dissolve
 
-    # Ask player for name.
+    # Ask the player for a name.
     python:
         player_name = renpy.input("Hi there! What's your name?", length=32)
         player_name = player_name.strip()
@@ -33,43 +36,42 @@ label start:
         else:
             affection += 1
 
-    show teacher smile 1 at halfsize, center
+    show teacher smile 1 at scale(0.6), center
 
     # Display lines of dialogue.
     teacher "Nice to meet you, [player_name]! Today, we're going to go through a few questions to understand how you're feeling. This will help us support you better."
     teacher "Let's start. On a scale of 1 to 10, how often do you feel anxious or worried?"
 
-    # This is where we will put in the Myers-Briggs test
+    # This is where the player will take a Myers-Briggs test.
     teacher "Great, thank you for your honesty. This will help us understand your needs. Remember, it's important to take care of your mental health just as you would your physical health."
 
     scene bg lecturehall
     with dissolve
 
     show classmate sad at left
+    pause 0.8
+    show classmate sad at left, flip
 
     player "Hey Alex, you okay? You seem a bit off today."
-    classmate "(sighs) Just dealing with some stuff. It's been a tough week."
+    classmate "(sigh) Just dealing with some stuff. It's been a tough week."
 
     menu:
         "If you need to talk, I'm here for you.":
             $ affection += 1
-            player "If you need to talk, I'm here for you."
             classmate "Thanks. I appreciate it."
 
         "We all have tough weeks, you'll get through it.":
             $ affection -= 1
-            player "We all have tough weeks, you'll get through it."
             classmate "Yeah, I guess..."
 
-
-    show teacher neutral 1 at halfsize, right
+    show teacher neutral 1 at scale(0.6), right
 
     "Class begins, but you can't help but notice Alex's distracted state. The teacher discusses the importance of mental health awareness, which resonates deeply with the you."
 
     scene bg club
     with dissolve
 
-    show teacher annoyed 1 at halfsize, left
+    show classmate upset at scale(0.6), right
 
     "Later, in the hallway, you overhear Alex talking to another student."
     classmate "(frustrated) I don't know what to do anymore. It just feels like everything is falling apart."
@@ -82,7 +84,6 @@ label start:
 
         "Maybe you should try to relax and take it easy.":
             $ affection -= 1
-            player "Maybe you should try to relax and take it easy."
             classmate "I wish it were that simple..."
 
     player "I'm really sorry to hear that. Have you considered talking to the school counselor? They might be able to help."
@@ -120,15 +121,15 @@ label start:
 
 label good_ending:
     if affection > 0:
-        show teacher smile 2 at halfsize, center
+        show teacher smile 2 at scale(0.6), center
 
-    show teacher sad 2 at halfsize, right
+    show teacher sad 2 at scale(0.6), right
 
     teacher "I don't know how to say this, but unfortunately, one of our classmates took her own life last night."
     player "(thinking) No, it can't be her. Please don't be her."
     teacher "For the privacy of the individual, we're currently not able to say who it was. But please be respectful for the time being."
 
-    show classmate smile at halfsize, left
+    show classmate smile at scale(0.5), left
 
     classmate "I'm sorry I'm late. I had an appointment with the counselor this morning."
     player "(thinking) Thank goodness she's okay."
@@ -136,7 +137,6 @@ label good_ending:
 label bad_ending:
     if affection < 0:
         show classmate sad
-        "Affection: [affection]"
 
     scene black
     with dissolve
