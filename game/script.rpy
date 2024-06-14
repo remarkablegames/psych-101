@@ -32,17 +32,28 @@ label start:
         else:
             affection += 1
 
-    show teacher smile 2 at halfsize, center
+    show teacher smile at halfsize, center
 
     # Display lines of dialogue.
-    teacher "Nice to meet you, [player_name]!"
-    teacher "[player_name], do you want the good or bad ending?"
+    teacher "Nice to meet you, [player_name]! Today, we're going to go through a few questions to understand how you're feeling. This will help us support you better."
+    teacher "Let's start. On a scale of 1 to 10, how often do you feel anxious or worried?"
 
-    show teacher smile 1 at halfsize, center
+    # This is where we will put in the Myers-Briggs test
+    teacher "Great, thank you for your honesty. This will help us understand your needs. Remember, it's important to take care of your mental health just as you would your physical health."
+
+    scene bg lecturehall
+    with dissolve
+
+    show teacher neutral at halfsize, left
+
+    player "Hey Alex, you okay? You seem a bit off today."
+    teacher "(sighs) Just dealing with some stuff. It's been a tough week."
+    player "If you need to talk, I'm here for you."
+    teacher "Thanks. I appreciate it."
 
     menu:
         "Good ending.":
-            $ affection += 1
+            $ affection += 1 
             jump good_ending
 
         "Bad ending.":
