@@ -22,7 +22,13 @@ Play the game on:
 
 ## Prerequisites
 
-- [Ren'Py SDK](https://www.renpy.org/latest.html)
+Download [Ren'Py SDK](https://www.renpy.org/latest.html).
+
+Symlink `renpy`:
+
+```sh
+sudo ln -sf $(realpath <path>/renpy-sdk/renpy.sh) /usr/local/bin/renpy
+```
 
 ## Install
 
@@ -35,31 +41,17 @@ cd psych-101
 
 ## Run
 
-Change directory to Ren'Py SDK:
+Open `Ren'Py Launcher`:
 
 ```sh
-cd path/to/renpy-sdk
+renpy
 ```
-
-### CLI
 
 Launch the project:
 
 ```sh
-./renpy.sh path/to/psych-101
+renpy .
 ```
-
-### GUI
-
-Open `Ren'Py Launcher`:
-
-```sh
-./renpy.sh launcher
-```
-
-Click `refresh` and select `psych-101`
-
-Click `Launch Project`
 
 ## License
 
