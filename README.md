@@ -41,16 +41,16 @@ cd psych-101
 
 ## Run
 
-Open `Ren'Py Launcher`:
-
-```sh
-renpy
-```
-
 Launch the project:
 
 ```sh
 renpy .
+```
+
+Or open `Ren'Py Launcher`:
+
+```sh
+renpy
 ```
 
 ## License
