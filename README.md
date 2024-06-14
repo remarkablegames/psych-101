@@ -17,6 +17,8 @@ Play the game on:
 ## Credits
 
 - [Withoutpenorpaper](https://witpop.itch.io/sprite-pack-female-pink-hair)
+- [Lia](https://liah0227.itch.io/hoshiko)
+- [renpytom](https://github.com/renpy/renpy/tree/master/the_question/game/images)
 
 ## Prerequisites
 

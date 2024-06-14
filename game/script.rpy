@@ -1,6 +1,7 @@
 ﻿# Declare characters used by this game.
+define classmate = Character("Alex", color="#bb8493")
 define player = Character("[player_name]", color="#c8c8ff")
-define teacher = Character("Teacher", color="#c8ffc8")
+define teacher = Character("Teacher", color="#faf0e6")
 
 # Variables.
 default affection = 0
@@ -44,12 +45,12 @@ label start:
     scene bg lecturehall
     with dissolve
 
-    show teacher neutral at halfsize, left
+    show classmate sad at left
 
     player "Hey Alex, you okay? You seem a bit off today."
-    teacher "(sighs) Just dealing with some stuff. It's been a tough week."
+    classmate "(sighs) Just dealing with some stuff. It's been a tough week."
     player "If you need to talk, I'm here for you."
-    teacher "Thanks. I appreciate it."
+    classmate "Thanks. I appreciate it."
 
     menu:
         "Good ending.":
@@ -62,7 +63,7 @@ label start:
 
 label good_ending:
     if affection > 0:
-        show teacher smile 4 at halfsize, center
+        show classmate smile
         "Affection: [affection]"
 
     scene black
@@ -74,7 +75,7 @@ label good_ending:
 
 label bad_ending:
     if affection < 0:
-        show teacher sad 2 at halfsize, center
+        show classmate sad
         "Affection: [affection]"
 
     scene black
