@@ -108,8 +108,12 @@ label act_1:
     scene bg lecturehall
     with dissolve
 
+    queue music "tense_intro.ogg"
+    queue music "tense_verse.ogg"
+
     "You get to class the next day and notice that Alex is absent. The room feels tense."
-    player "{i}(thinking){/i} Where is Alex? She said she’d be here today."
+    player "{i}(thinking){/i} Where’s Alex? She said she’d be here today."
+
 
     if affection > 0:
         jump good_ending
