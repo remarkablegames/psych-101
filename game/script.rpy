@@ -1,7 +1,7 @@
 ﻿default affection = 0
 
 label start:
-    play music "lofi.ogg" fadein 1.2
+    play music "lofi_intro.ogg" fadein 1.2
 
     "I see my psychology teacher walking up to me..."
 
@@ -19,7 +19,7 @@ label start:
         if not player_name:
             player_name = "Player"
 
-    queue music "lofi_beat.ogg"
+    queue music "lofi_verse.ogg"
 
     show teacher smile at scale(0.6), center
 
@@ -35,8 +35,8 @@ label act_1:
     pause 0.8
     show classmate sad at left, flip
 
-    play music "chill.ogg"
-    queue music "chill_beat.ogg"
+    play music "chill_intro.ogg"
+    queue music "chill_verse.ogg"
 
     player "Hey Alex, you okay? You seem a bit off today."
     classmate "{i}(sigh){/i} Just dealing with some stuff. It’s been a tough week."
@@ -59,6 +59,8 @@ label act_1:
     scene bg club
     with dissolve
 
+    play music ["tropical_house5_intro.ogg", "tropical_house5_verse.ogg"]
+
     show classmate upset at scale(0.6), right
 
     "Later, in the hallway, you overhear Alex talking to another student."
@@ -79,6 +81,11 @@ label act_1:
     player "It’s worth a try. Sometimes just talking to someone can make a big difference."
     classmate "Thanks. I appreciate it."
 
+    stop music fadeout 4
+
+    queue music "tropical_house5_refrain.ogg" fadein 0.5
+    queue music ["tropical_house5_prechorus.ogg", "tropical_house5_chorus.ogg"]
+
     scene bg meadow
     with dissolve
 
@@ -95,7 +102,9 @@ label act_1:
 
         "Ignore the post.":
             $ affection -= 1
-    
+
+    stop music fadeout 4
+
     scene bg lecturehall
     with dissolve
 
