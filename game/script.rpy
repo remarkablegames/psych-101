@@ -35,6 +35,9 @@ label act_1:
     pause 0.8
     show classmate sad at left, flip
 
+    play music "chill.ogg"
+    queue music "chill_beat.ogg"
+
     player "Hey Alex, you okay? You seem a bit off today."
     classmate "{i}(sigh){/i} Just dealing with some stuff. It’s been a tough week."
 
@@ -50,6 +53,8 @@ label act_1:
     show teacher normal at scale(0.6), right
 
     "Class begins, but you can’t help but notice Alex’s distracted state. The teacher discusses the importance of mental health awareness, which resonates deeply with the you."
+
+    stop music fadeout 4
 
     scene bg club
     with dissolve
