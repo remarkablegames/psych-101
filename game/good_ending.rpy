@@ -1,8 +1,8 @@
 label good_ending:
     if affection > 0:
-        show teacher happy at scale(0.6), center
+        show teacher happy
 
-    show teacher sadder at scale(0.6), right
+    show teacher sadder
 
     teacher "I don’t know how to say this, but unfortunately, one of our classmates took her own life last night."
     player "{i}(thinking){/i} No, it can’t be her. Please don’t be her."
