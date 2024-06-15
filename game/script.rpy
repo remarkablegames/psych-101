@@ -1,33 +1,17 @@
-﻿# Declare characters used by this game.
-define classmate = Character("Alex", color="#bb8493")
-define player = Character("[player_name]", color="#c8c8ff")
-define teacher = Character("Teacher", color="#faf0e6")
+﻿default affection = 0
 
-# Variables.
-default affection = 0
-
-# Transforms.
-transform flip():
-    xzoom -1.0
-
-transform scale(ratio):
-    zoom ratio
-
-# The game starts here.
 label start:
-    "I see a cute girl walking up to me..."
+    "I see my psychology teacher walking up to me..."
 
-    # Show a background.
     scene bg uni
     with fade
 
-    # Show a character sprite.
     show teacher neutral at scale(0.6), center
     with dissolve
 
     # Ask the player for a name.
     python:
-        player_name = renpy.input("Hi there! What’s your name?", length=32)
+        player_name = renpy.input("Hey there! What’s your name?", length=32)
         player_name = player_name.strip()
 
         if not player_name:
@@ -35,10 +19,8 @@ label start:
 
     show teacher smile at scale(0.6), center
 
-    # Display lines of dialogue.
     teacher "Nice to meet you, [player_name]!"
 
-    # This is where the player will take a Myers-Briggs test.
     jump personality_test
 
 label act_1:

@@ -36,6 +36,7 @@ label personality_test:
         teacher "A social chameleon. Your mood changes with the seasons. Your indecisiveness makes you alluring."
 
     show teacher smile at scale(0.6), center
-    teacher "Thanks for your honesty. Remember that knowing yourself and taking care of your mental health is equally as important as taking care of your physical health."
+    teacher "Thanks for your honesty. Remember that knowing yourself and taking care of your mental health is as important as taking care of your physical health."
+    teacher "See you later in class."
 
     jump act_1
