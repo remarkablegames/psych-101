@@ -13,6 +13,8 @@ label good_ending:
     classmate "I’m sorry I’m late. I had an appointment with the counselor this morning."
     player "{i}(thinking){/i} Thank goodness she’s okay."
 
+    play music "tropical_house.ogg"
+
     #put counselor/therapist's office background below
     scene bg uni
 
@@ -28,6 +30,8 @@ label good_ending:
 
     scene bg lecturehall
     with dissolve
+
+    queue music "tropical_house_beat.ogg"
 
     "In the following days, you and Alex continue to support each other. Alex starts to feel more positive and engaged in class."
 
