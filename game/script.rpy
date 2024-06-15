@@ -1,6 +1,8 @@
 ﻿default affection = 0
 
 label start:
+    play music "lofi.ogg" fadein 1.2
+
     "I see my psychology teacher walking up to me..."
 
     scene bg uni
@@ -11,11 +13,13 @@ label start:
 
     # Ask the player for a name.
     python:
-        player_name = renpy.input("Hey there! What’s your name?", length=32)
+        player_name = renpy.input("Hi there! What’s your name?", length=32)
         player_name = player_name.strip()
 
         if not player_name:
             player_name = "Player"
+
+    queue music "lofi_beat.ogg"
 
     show teacher smile at scale(0.6), center
 

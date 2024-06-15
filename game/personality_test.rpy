@@ -2,7 +2,11 @@ default extrovert = 0
 default introvert = 0
 
 label personality_test:
-    teacher "I’m going to ask a few questions to understand how you’re feeling. This will help me understand you better."
+    teacher "I’m going to ask you a few questions. This will help me understand you better."
+
+    menu:
+        "Sure!":
+            pass
 
     teacher "It’s Friday night and raining. What are you thinking?"
     menu:
@@ -38,5 +42,6 @@ label personality_test:
     show teacher smile at scale(0.6), center
     teacher "Thanks for your honesty. Remember that knowing yourself and taking care of your mental health is as important as taking care of your physical health."
     teacher "See you later in class."
+    stop music fadeout 4
 
     jump act_1
