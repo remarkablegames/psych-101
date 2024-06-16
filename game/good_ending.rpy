@@ -8,15 +8,20 @@ label good_ending:
     player "{i}(thinking){/i} No, it can’t be her. Please don’t be her."
     teacher "For the privacy of the individual, we’re currently not able to say who it was. But please be respectful for the time being."
 
+    stop music fadeout 4
+    queue music "tropical_house5_intro.ogg" fadein 4
+    queue music "tropical_house5_verse.ogg"
+
     show classmate smile at scale(0.6), left
 
     classmate "I’m sorry I’m late. I had an appointment with the counselor this morning."
-    player "{i}(thinking){/i} Thank goodness she’s okay."
 
-    queue music ["tropical_house1_intro.ogg", "tropical_house1_verse.ogg"]
+    player "{i}(thinking){/i} Thank goodness she’s okay."
 
     #put counselor/therapist's office background below
     scene bg uni
+
+    queue music "tropical_house5_refrain.ogg"
 
     "You and Alex visit the counselor together, talking openly about Alex’s struggles. The counselor provides resources and support."
 
@@ -30,6 +35,8 @@ label good_ending:
 
     scene bg lecturehall
     with dissolve
+
+    queue music ["tropical_house5_prechorus.ogg", "tropical_house5_chorus.ogg"]
 
     "In the following days, you and Alex continue to support each other. Alex starts to feel more positive and engaged in class."
 

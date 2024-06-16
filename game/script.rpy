@@ -59,7 +59,7 @@ label act_1:
     scene bg club
     with dissolve
 
-    play music ["tropical_house5_intro.ogg", "tropical_house5_verse.ogg"]
+    play music ["dark_intro.ogg", "dark_verse.ogg"]
 
     show classmate upset at scale(0.6), right
 
@@ -83,8 +83,7 @@ label act_1:
 
     stop music fadeout 4
 
-    queue music "tropical_house5_refrain.ogg" fadein 0.5
-    queue music ["tropical_house5_prechorus.ogg", "tropical_house5_chorus.ogg"]
+    queue music ["tropical_house1_intro.ogg", "tropical_house1_verse.ogg"]
 
     scene bg meadow
     with dissolve
