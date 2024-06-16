@@ -1,18 +1,15 @@
 label good_ending:
-    if affection > 0:
-        show teacher happy
-
-    show teacher sadder
+    show teacher sadder at scale(0.6), center
 
     teacher "I don’t know how to say this, but unfortunately, one of our classmates took her own life last night."
     player "{i}(thinking){/i} No, it can’t be her. Please don’t be her."
     teacher "For the privacy of the individual, we’re currently not able to say who it was. But please be respectful for the time being."
 
-    stop music fadeout 4
-    queue music "tropical_house5_intro.ogg" fadein 4
-    queue music "tropical_house5_verse.ogg"
+    stop music fadeout 1
+    queue music "tropical_house1_intro.ogg" fadein 8
+    queue music "tropical_house1_verse.ogg"
 
-    show classmate smile at scale(0.6), left
+    show classmate smile at scale(0.6), left, flip
 
     classmate "I’m sorry I’m late. I had an appointment with the counselor this morning."
 
@@ -21,7 +18,7 @@ label good_ending:
     #put counselor/therapist's office background below
     scene bg uni
 
-    queue music "tropical_house5_refrain.ogg"
+    queue music ["tropical_house1_intro.ogg", "tropical_house1_verse.ogg"]
 
     "You and Alex visit the counselor together, talking openly about Alex’s struggles. The counselor provides resources and support."
 
@@ -29,14 +26,12 @@ label good_ending:
 
     teacher "It’s great to see friends supporting each other. Alex, we’re here for you. Let’s work together to help you through this."
 
-    show classmate smile at scale(0.6), left
+    show classmate smile at scale(0.8), left, flip
 
     classmate "Thank you. I feel like I have a bit more hope now."
 
     scene bg lecturehall
     with dissolve
-
-    queue music ["tropical_house5_prechorus.ogg", "tropical_house5_chorus.ogg"]
 
     "In the following days, you and Alex continue to support each other. Alex starts to feel more positive and engaged in class."
 

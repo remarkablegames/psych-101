@@ -56,12 +56,13 @@ label act_1:
 
     stop music fadeout 4
 
+    queue music "sad_intro.ogg"
+    queue music "sad_verse.ogg"
+
     scene bg club
     with dissolve
 
-    play music ["dark_intro.ogg", "dark_verse.ogg"]
-
-    show classmate upset at scale(0.6), right
+    show classmate upset at scale(0.7), right
 
     "Later, in the hallway, you overhear Alex talking to another student."
     classmate "{i}(frustrated){/i} I don’t know what to do anymore. It just feels like everything is falling apart."
@@ -83,7 +84,7 @@ label act_1:
 
     stop music fadeout 4
 
-    queue music ["tropical_house1_intro.ogg", "tropical_house1_verse.ogg"]
+    queue music ["dark_intro.ogg", "dark_verse.ogg"]
 
     scene bg meadow
     with dissolve
@@ -112,7 +113,6 @@ label act_1:
 
     "You get to class the next day and notice that Alex is absent. The room feels tense."
     player "{i}(thinking){/i} Where’s Alex? She said she’d be here today."
-
 
     if affection > 0:
         jump good_ending

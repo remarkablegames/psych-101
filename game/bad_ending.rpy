@@ -1,7 +1,4 @@
 label bad_ending:
-    if affection < 0:
-        show teacher sadder at scale(0.6), center
-
     show teacher sadder at scale(0.6), center
 
     teacher "I don’t know how to say this, but unfortunately, one of our classmates took her own life last night."
@@ -18,8 +15,10 @@ label bad_ending:
 
     scene black
     with dissolve
-#Put message on why it's important to listen. Add suicide facts, maybe suicide hotline. 
-#Ask the player if maybe they could have done something different. 
+
+    # Put message on why it's important to listen. Add suicide facts, maybe suicide hotline.
+    # Ask the player if maybe they could have done something different.
+
     "{b}Bad Ending{/b}." 
 
     return
