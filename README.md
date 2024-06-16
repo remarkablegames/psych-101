@@ -51,10 +51,16 @@ Launch the project:
 renpy .
 ```
 
-Or open `Ren'Py Launcher`:
+Or open the `Ren'Py Launcher`:
 
 ```sh
 renpy
+```
+
+Clean the cache:
+
+```sh
+find game -name "*.rpyc" -delete
 ```
 
 ## License
