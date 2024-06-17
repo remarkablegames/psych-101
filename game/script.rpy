@@ -32,8 +32,8 @@ label act_1:
 
     stop music fadeout 4
 
-    queue music "sad_intro.ogg"
-    queue music "sad_verse.ogg"
+    queue music "sad1_intro.ogg"
+    queue music "sad1_verse.ogg"
 
     scene bg club
     with dissolve
@@ -60,13 +60,15 @@ label act_1:
 
     stop music fadeout 4
 
-    queue music ["dark_intro.ogg", "dark_verse.ogg"]
+    queue music "sad2_intro.ogg"
 
     scene bg meadow
     with dissolve
 
     "Later that evening, you check social media and see a post from Alex."
     classmate "Sometimes I wonder if it’s all worth it. Life just feels like one big mess."
+
+    queue music ["sad2_verse.ogg", "sad2_bridge.ogg"]
 
     menu:
         "Hey, I saw your post. I’m really concerned about you. Please, let’s talk.":
