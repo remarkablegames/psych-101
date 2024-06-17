@@ -1,31 +1,7 @@
 ﻿default affection = 0
 
 label start:
-    play music "lofi_intro.ogg" fadein 1.2
-
-    "I see my psychology teacher walking up to me..."
-
-    scene bg uni
-    with fade
-
-    show teacher neutral at scale(0.6), center
-    with dissolve
-
-    # Ask the player for a name.
-    python:
-        player_name = renpy.input("Hi there! What’s your name?", length=32)
-        player_name = player_name.strip()
-
-        if not player_name:
-            player_name = "Player"
-
-    queue music "lofi_verse.ogg"
-
-    show teacher smile at scale(0.6), center
-
-    teacher "Nice to meet you, [player_name]!"
-
-    jump personality_test
+    jump intro
 
 label act_1:
     scene bg lecturehall

@@ -5,7 +5,9 @@ label personality_test:
     teacher "I’m going to ask you a few questions. This will help me understand you better."
 
     menu:
-        "Sure!":
+        "Go for it!":
+            pass
+        "Uh... sure?":
             pass
 
     teacher "It’s Friday night and raining. What are you thinking?"
@@ -40,8 +42,14 @@ label personality_test:
         teacher "A social chameleon. Your mood changes with the seasons. Your indecisiveness makes you alluring."
 
     show teacher smile at scale(0.6), center
-    teacher "Thanks for your honesty. Remember that knowing yourself and taking care of your mental health is as important as taking care of your physical health."
+
+    teacher "Thanks for your honesty."
+    teacher "Remember that knowing yourself is half the battle."
+
+    show teacher happy at scale(0.6), center
+
     teacher "See you later in class."
+
     stop music fadeout 4
 
     jump act_1
