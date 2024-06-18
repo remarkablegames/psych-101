@@ -15,7 +15,7 @@ label act_1:
     queue music "chill_verse.ogg"
 
     player "Hey Alex, you okay? You seem a bit off today."
-    classmate "{i}(sigh){/i} Just dealing with some stuff. It’s been a tough week."
+    classmate "{alpha=0.7}{i}(sigh){/i}{/alpha} Just dealing with some stuff. It’s been a tough week."
 
     menu:
         "If you need to talk, I’m here for you.":
@@ -28,7 +28,7 @@ label act_1:
 
     show teacher normal at scale(0.6), right
 
-    "Class begins, but you can’t help but notice Alex’s distracted state. The teacher discusses the importance of mental health awareness, which resonates deeply with the you."
+    "Class begins, but you can’t help but notice Alex’s distracted state. The teacher discusses the importance of mental health awareness, which deeply resonates with you."
 
     stop music fadeout 4
 
@@ -41,7 +41,7 @@ label act_1:
     show classmate upset at scale(0.7), right
 
     "Later, in the hallway, you overhear Alex talking to another student."
-    classmate "{i}(frustrated){/i} I don’t know what to do anymore. It just feels like everything is falling apart."
+    classmate "{alpha=0.7}{i}(frustrated){/i}{/alpha} I don’t know what to do anymore. It just feels like everything is falling apart."
 
     menu:
         "Alex, I overheard what you were saying. Do you want to talk about it?":
@@ -90,7 +90,7 @@ label act_1:
     queue music "tense_verse.ogg"
 
     "You get to class the next day and notice that Alex is absent. The room feels tense."
-    player "{i}(thinking){/i} Where’s Alex? She said she’d be here today."
+    player "{alpha=0.7}{i}(thinking){/i}{/alpha} Where’s Alex? She said she’d be here today."
 
     if affection > 0:
         jump good_ending
