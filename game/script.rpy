@@ -38,25 +38,30 @@ label act_1:
     scene bg club
     with dissolve
 
-    show classmate upset at scale(0.7), right
-
     "Later, in the hallway, you overhear Alex talking to another student."
+
+    show classmate upset at scale(0.7), right
+    pause 0.8
+    show classmate upset at right, flip
+
     classmate "{alpha=0.7}{i}(frustrated){/i}{/alpha} I don’t know what to do anymore. It just feels like everything is falling apart."
 
     menu:
         "Alex, I overheard what you were saying. Do you want to talk about it?":
             $ affection += 1
-            player "Alex, I overheard what you were saying. Do you want to talk about it?"
+            show classmate upset at right, unflip
             classmate "It’s just... everything feels so heavy. My family is going through a lot, and I’ve been feeling really low."
 
         "Maybe you should try to relax and take it easy.":
             $ affection -= 1
+            show classmate upset at right, unflip
             classmate "I wish it were that simple..."
 
     player "I’m really sorry to hear that. Have you considered talking to the school counselor? They might be able to help."
+
     classmate "Maybe... I just don’t know if it will change anything."
     player "It’s worth a try. Sometimes just talking to someone can make a big difference."
-    classmate "Thanks. I appreciate it."
+    classmate "Thanks. I appreciate your concern."
 
     stop music fadeout 4
 
@@ -66,7 +71,7 @@ label act_1:
     with dissolve
 
     "Later that evening, you check social media and see a post from Alex."
-    classmate "Sometimes I wonder if it’s all worth it. Life just feels like one big mess."
+    classmate "“Sometimes I wonder if it’s all worth it. Life just feels like one big mess.”"
 
     queue music ["sad2_verse.ogg", "sad2_bridge.ogg"]
 
@@ -95,8 +100,8 @@ label act_1:
     show teacher sadder at scale(0.6), center
 
     teacher "I don’t know how to say this, but unfortunately, one of our classmates took her own life last night."
-    player "{alpha=0.7}{i}(thinking){/i}{/alpha} No, it can’t be her. Please don’t be her."
-    teacher "For the privacy of the individual, we’re currently not able to say who it was. But please be respectful for the time being."
+    player "{alpha=0.7}{i}(thinking){/i}{/alpha} No, it can’t be her."
+    teacher "For the privacy of the individual, we’re currently not able to share any news. But please be respectful for the time being."
 
     stop music fadeout 1
 

@@ -6,9 +6,9 @@ label good_ending:
 
     classmate "I’m sorry I’m late. I had an appointment with the counselor this morning."
 
-    player "{i}(thinking){/i} Thank goodness she’s okay."
+    player "{alpha=0.7}{i}(thinking){/i}{/alpha} Thank goodness she’s okay."
 
-    #put counselor/therapist's office background below
+    # put counselor/therapist's office background below
     scene bg uni
 
     queue music ["tropical_house1_intro.ogg", "tropical_house1_verse.ogg"]
