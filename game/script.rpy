@@ -92,6 +92,14 @@ label act_1:
     "You get to class the next day and notice that Alex is absent. The room feels tense."
     player "{alpha=0.7}{i}(thinking){/i}{/alpha} Where’s Alex? She said she’d be here today."
 
+    show teacher sadder at scale(0.6), center
+
+    teacher "I don’t know how to say this, but unfortunately, one of our classmates took her own life last night."
+    player "{alpha=0.7}{i}(thinking){/i}{/alpha} No, it can’t be her. Please don’t be her."
+    teacher "For the privacy of the individual, we’re currently not able to say who it was. But please be respectful for the time being."
+
+    stop music fadeout 1
+
     if affection > 0:
         jump good_ending
     else:

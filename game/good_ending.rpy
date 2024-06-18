@@ -1,11 +1,4 @@
 label good_ending:
-    show teacher sadder at scale(0.6), center
-
-    teacher "I don’t know how to say this, but unfortunately, one of our classmates took her own life last night."
-    player "{i}(thinking){/i} No, it can’t be her. Please don’t be her."
-    teacher "For the privacy of the individual, we’re currently not able to say who it was. But please be respectful for the time being."
-
-    stop music fadeout 1
     queue music "tropical_house1_intro.ogg" fadein 8
     queue music "tropical_house1_verse.ogg"
 
