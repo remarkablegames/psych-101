@@ -1,9 +1,6 @@
 ﻿default affection = 0
 
-label start:
-    jump intro
-
-label act_1:
+label class_1:
     scene bg lecturehall
     with dissolve
 
@@ -32,6 +29,9 @@ label act_1:
 
     stop music fadeout 4
 
+    jump after_class_1
+
+label after_class_1:
     queue music "sad1_intro.ogg"
     queue music "sad1_verse.ogg"
 
@@ -65,6 +65,9 @@ label act_1:
 
     stop music fadeout 4
 
+    jump personality_test_agreeableness
+
+label after_class_2:
     queue music "sad2_intro.ogg"
 
     scene bg meadow
@@ -88,6 +91,9 @@ label act_1:
 
     stop music fadeout 4
 
+    jump class_3
+
+label class_3:
     scene bg lecturehall
     with dissolve
 

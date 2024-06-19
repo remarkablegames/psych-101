@@ -1,6 +1,6 @@
 ﻿default player_age = 0
 
-label intro:
+label start:
     play music "lofi_intro.ogg" fadein 1.2
 
     "I see my psychology teacher walking up to me..."
@@ -37,4 +37,4 @@ label intro:
 
     teacher "Welcome to Pysch 101!"
 
-    jump personality_test
+    jump personality_test_extraversion
