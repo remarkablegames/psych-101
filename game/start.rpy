@@ -13,9 +13,11 @@ label start:
 
     queue music "lofi_verse.ogg"
 
+    teacher "Hi there!{w=0.2} What’s your name?"
+
     # Ask for the player's name.
     python:
-        player_name = renpy.input("Hi there! What’s your name?", length=32)
+        player_name = renpy.input("My name is...", length=32)
         player_name = player_name.strip()
 
         if not player_name:
@@ -26,7 +28,8 @@ label start:
     teacher "Nice to meet you, [player_name]!"
 
     # Ask for the player's age.
-    $ player_age = int(renpy.input("How old are you?", length=3, allow="0123456789"))
+    teacher "How old are you?"
+    $ player_age = int(renpy.input("My age is...", length=3, allow="0123456789"))
 
     if player_age < 18:
         show teacher annoyed at scale(0.6), center
