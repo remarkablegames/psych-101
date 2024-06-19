@@ -54,7 +54,7 @@ label personality_test_extraversion:
 
     stop music fadeout 4
 
-    jump class_1
+    jump act_1
 
 label personality_test_agreeableness:
     queue music "lofi_verse.ogg"
@@ -114,4 +114,4 @@ label personality_test_agreeableness:
 
     stop music fadeout 4
 
-    jump after_class_2
+    jump act_2
