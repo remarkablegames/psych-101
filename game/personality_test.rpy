@@ -1,5 +1,4 @@
 default extrovert = 0
-default agreeable = 0
 
 label personality_test_extraversion:
     queue music "lofi_verse.ogg"
@@ -56,6 +55,8 @@ label personality_test_extraversion:
 
     jump class_1
 
+default agreeable = 0
+
 label personality_test_agreeableness:
     queue music "lofi_verse.ogg"
 
@@ -88,7 +89,7 @@ label personality_test_agreeableness:
     menu:
         "Take the time to sympathize with your friend.":
             $ agreeable += 1
-        "Change the topic since you’re not interested.":
+        "Change the subject since you’re not interested.":
             $ agreeable -= 1
 
     show teacher happy at scale(0.6), center
@@ -115,3 +116,63 @@ label personality_test_agreeableness:
     stop music fadeout 4
 
     jump after_class_2
+
+default conscientious = 0
+
+label personality_test_conscientiousness:
+    queue music "lofi_verse.ogg"
+
+    scene bg uni
+    with fade
+
+    "I see my psychology teacher walking up to me..."
+
+    show teacher neutral at scale(0.6), center
+    with dissolve
+
+    teacher "I’m going to ask you a few questions so that I can understand you better."
+
+    show teacher smile at scale(0.6), center
+
+    menu:
+        "Alright.":
+            pass
+
+    teacher "When it comes to chores,{w=0.2} what do you tend to do?"
+    menu:
+        "Get them done right away.":
+            $ conscientious += 1
+        "Avoid doing them if possible.":
+            $ conscientious -= 1
+
+    teacher "Interesting.{w=0.2} Next question."
+
+    teacher "After taking something out of the drawer,{w=0.2} what do you do once you’re done with it?"
+    menu:
+        "I would put it back in its proper place.":
+            $ conscientious += 1
+        "I would leave it lying around.":
+            $ conscientious -= 1
+
+    show teacher happy at scale(0.6), center
+    teacher "Thanks for answering my questions."
+
+    if conscientious > 0:
+        teacher "You scored high on {b}conscientiousness{/b}."
+        teacher "You’re organized and responsible.{w=0.2} Conscientiousness people tend to follow rules and prefer clean homes."
+
+    elif agreeable < 0:
+        teacher "You scored low on {b}conscientiousness{/b}."
+        teacher "You’re laid back and don’t take obligations too seriously.{w=0.2} Procrastination is part of who you are."
+
+    else:
+        teacher "You scored in the middle on {b}conscientiousness{/b}."
+        teacher "You can be productive if you’re motivated.{w=0.2} Setting clear goals is the key to success."
+
+    teacher "I appreciate your honesty."
+    teacher "Understanding our desires influences how we approach tasks."
+    show teacher happy at scale(0.6), center
+
+    teacher "See you later in class."
+
+    stop music fadeout 4
