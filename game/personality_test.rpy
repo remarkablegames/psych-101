@@ -115,7 +115,7 @@ label personality_test_agreeableness:
 
     stop music fadeout 4
 
-    jump after_class_2
+    jump class_2
 
 default conscientious = 0
 
@@ -176,3 +176,5 @@ label personality_test_conscientiousness:
     teacher "See you later in class."
 
     stop music fadeout 4
+
+    jump before_class_4
