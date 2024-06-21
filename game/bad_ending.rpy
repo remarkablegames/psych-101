@@ -1,8 +1,10 @@
 label bad_ending:
-    player "A chill runs down your spine."
+    player "A chill runs down your spine." with hpunch
 
     scene bg meadow
     with dissolve
+
+    queue music ["sad3_verse.ogg", "sad3_hook.ogg"]
 
     "In the final scene, you stand alone at a grave, holding a bouquet of flowers."
     player "I brought you flowers.{w=0.3} I’m sorry I wasn’t there for you.{w=0.3} I promise I won’t let it happen to anyone else."

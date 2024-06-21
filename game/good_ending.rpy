@@ -3,6 +3,7 @@ label good_ending:
     queue music "tropical_house1_verse.ogg"
 
     show classmate smile at scale(0.6), left, flip
+    with moveinleft
 
     classmate "I’m sorry I’m late.{w=0.2} I had an appointment with the counselor this morning."
 
