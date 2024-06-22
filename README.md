@@ -69,6 +69,8 @@ Or open the `Ren'Py Launcher`:
 renpy
 ```
 
+Press `Shift`+`R` to reload the game.
+
 Clean the cache:
 
 ```sh
