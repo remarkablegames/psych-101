@@ -16,9 +16,15 @@ Play the game on:
 
 ## Credits
 
+### Art
+
 - [Withoutpenorpaper](https://witpop.itch.io/sprite-pack-female-pink-hair)
 - [Lia](https://liah0227.itch.io/hoshiko)
 - [renpytom](https://github.com/renpy/renpy/tree/master/the_question/game/images)
+
+### Sound
+
+- [Bell](https://pixabay.com/sound-effects/bel-sekolah-153453/)
 
 ## Ideation
 

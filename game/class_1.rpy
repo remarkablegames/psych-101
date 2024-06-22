@@ -64,7 +64,7 @@ label after_class_1:
     player "I find it interesting how animals can be conditioned to a stimulus."
     classmate "True."
 
-    stop music
+    play sound "school_bell.ogg" volume 0.3
 
     "The school bell rings."
 
