@@ -132,7 +132,7 @@ label after_class_1_study:
     scene black
     with fade
 
-    queue music "sad14_refrain.ogg"
+    queue music "sad8_outro.ogg"
 
     "You went to the library and studied for a few hours."
     "Feeling exhausted, you decided to wrap up the session."
@@ -144,6 +144,7 @@ label after_class_1_hangout:
     scene bg meadow
     with dissolve
 
+    queue music "sad14_refrain.ogg"
     queue music "sad14_hook.ogg"
 
     show classmate surprised
@@ -164,10 +165,10 @@ label after_class_1_hangout:
     classmate "Thanks for inviting me. This is really nice."
     player "I’m glad you’re enjoying it."
 
-    show classmate smile at right
-    with moveinleft
-
     "You and [classmate.name] find a bench and sit down to rest for a while."
+
+    show classmate smile at right
+    with ease
 
     menu:
         "Have you thought about what you want to do in the future?":
