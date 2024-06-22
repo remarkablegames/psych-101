@@ -132,7 +132,7 @@ label after_class_1_study:
     scene black
     with fade
 
-    queue music "sad2_intro.ogg"
+    queue music "sad14_refrain.ogg"
 
     "You went to the library and studied for a few hours."
     "Feeling exhausted, you decided to wrap up the session."
@@ -144,7 +144,7 @@ label after_class_1_hangout:
     scene bg meadow
     with dissolve
 
-    queue music "sad2_verse.ogg"
+    queue music "sad14_hook.ogg"
 
     show classmate surprised
     with moveinbottom
@@ -183,7 +183,8 @@ label after_class_1_hangout:
     scene bg lecturehall
     with dissolve
 
-    queue music ["dark_intro.ogg", "dark_verse.ogg"]
+    queue music "sad14_intro.ogg"
+    queue music "sad14_verse.ogg"
 
     "The next day, you enter the classroom and sit next to [classmate.name], who is still in a good mood."
 
@@ -205,11 +206,18 @@ label after_class_1_hangout:
 
     "Class begins, and the teacher discusses the importance of mental health awareness. You notice [classmate.name] paying attention and taking notes."
 
+    stop music fadeout 4
+
     scene bg uni
     with dissolve
 
-    show classmate smile at left
-    with fade
+    queue music "sad1_intro.ogg"
+    queue music "sad1_verse.ogg"
+
+    "You and [classmate.name] leave class after it ends."
+
+    show classmate smile
+    with dissolve
 
     player "Need help with any subjects?"
     classmate "Actually, yes. I’m struggling a bit with our psychology assignment."

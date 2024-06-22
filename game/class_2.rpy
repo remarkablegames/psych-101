@@ -6,7 +6,7 @@ label class_2:
     pause 0.8
     show classmate sad at left, flip
 
-    play music "chill_intro.ogg"
+    queue music "chill_intro.ogg"
     queue music "chill_verse.ogg"
 
     "One day, you notice [classmate.name] is a bit quieter than usual."
