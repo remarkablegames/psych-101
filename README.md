@@ -20,6 +20,11 @@ Play the game on:
 - [Lia](https://liah0227.itch.io/hoshiko)
 - [renpytom](https://github.com/renpy/renpy/tree/master/the_question/game/images)
 
+## Ideation
+
+- [Excalidraw](https://excalidraw.com/#json=fZsGhoV7_qbCx1CrTdl5w,RfNwdGpO82BLKXXnkH3MiQ)
+- [Game Design Document](https://docs.google.com/document/d/1XKnFt6Ct47ciPOkS1r2irNke3j0LwOY6ioVPo57E0s4/edit)
+
 ## Prerequisites
 
 Download [Ren'Py SDK](https://www.renpy.org/latest.html):
