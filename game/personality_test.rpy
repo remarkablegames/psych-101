@@ -76,20 +76,20 @@ label personality_test_agreeableness:
         "Sounds good!":
             pass
 
-    teacher "If a new person joined your group of friends for dinner,{w=0.2} what would you do?"
+    teacher "If a new person joined your group of friends for dinner,{w=0.2} what would you do next?"
     menu:
         "Make the new person feel at ease.":
             $ agreeable += 1
-        "Leave the new person alone.":
+        "Let the new person figure things out.":
             $ agreeable -= 1
 
     teacher "Interesting.{w=0.2} Next question."
 
-    teacher "If a colleague wanted to discuss life problems with you,{w=0.2} what would you do?"
+    teacher "If a colleague wanted to discuss life problems with you,{w=0.2} what’s your response?"
     menu:
         "Take the time to sympathize with your friend.":
             $ agreeable += 1
-        "Change the subject since you’re not interested.":
+        "Change the subject.":
             $ agreeable -= 1
 
     show teacher happy at scale(0.6), center
