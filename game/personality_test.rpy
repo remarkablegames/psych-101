@@ -3,7 +3,7 @@ default extrovert = 0
 label personality_test_extraversion:
     queue music "lofi_verse.ogg"
 
-    teacher "I’m going to ask you a few questions so that I can understand you better."
+    teacher "I’m going to ask you a few questions so I can understand you better."
 
     menu:
         "Go for it!":
@@ -68,7 +68,7 @@ label personality_test_agreeableness:
     show teacher neutral at scale(0.6), center
     with dissolve
 
-    teacher "I’m going to ask you a few questions so that I can understand you better."
+    teacher "I’m going to ask you a few questions so I can understand you better."
 
     show teacher smile at scale(0.6), center
 
@@ -130,7 +130,7 @@ label personality_test_conscientiousness:
     show teacher neutral at scale(0.6), center
     with dissolve
 
-    teacher "I’m going to ask you a few questions so that I can understand you better."
+    teacher "I’m going to ask you a few questions so I can understand you better."
 
     show teacher smile at scale(0.6), center
 
