@@ -115,7 +115,7 @@ label personality_test_agreeableness:
 
     stop music fadeout 4
 
-    jump class_2
+    jump class_3
 
 default conscientious = 0
 

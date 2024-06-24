@@ -1,4 +1,4 @@
-label class_2:
+label class_3:
     scene bg lecturehall
     with dissolve
 
@@ -29,9 +29,9 @@ label class_2:
 
     stop music fadeout 4
 
-    jump after_class_2
+    jump after_class_3
 
-label after_class_2:
+label after_class_3:
     queue music "sad1_intro.ogg"
     queue music "sad1_verse.ogg"
 
