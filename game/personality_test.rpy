@@ -1,15 +1,28 @@
-default extrovert = 0
-
-label personality_test_extraversion:
+label personality_test_intro:
     queue music "lofi_verse.ogg"
+
+    scene bg uni
+    with fade
+
+    "I see my psychology teacher walking up to me..."
+
+    show teacher neutral at scale(0.6), center
+    with dissolve
 
     teacher "I’m going to ask you a few questions so I can understand you better."
 
+    show teacher smile at scale(0.6), center
+
     menu:
-        "Go for it!":
+        "Let’s do it!":
             pass
-        "Uh... sure?":
-            pass
+
+    return
+
+default extrovert = 0
+
+label personality_test_extraversion:
+    call personality_test_intro
 
     teacher "It’s Friday night and raining.{w=0.2} What are you thinking?"
     menu:
@@ -58,23 +71,7 @@ label personality_test_extraversion:
 default agreeable = 0
 
 label personality_test_agreeableness:
-    queue music "lofi_verse.ogg"
-
-    scene bg uni
-    with fade
-
-    "I see my psychology teacher walking up to me..."
-
-    show teacher neutral at scale(0.6), center
-    with dissolve
-
-    teacher "I’m going to ask you a few questions so I can understand you better."
-
-    show teacher smile at scale(0.6), center
-
-    menu:
-        "Sounds good!":
-            pass
+    call personality_test_intro
 
     teacher "If a new person joined your group of friends for dinner,{w=0.2} what would you do next?"
     menu:
@@ -120,23 +117,7 @@ label personality_test_agreeableness:
 default conscientious = 0
 
 label personality_test_conscientiousness:
-    queue music "lofi_verse.ogg"
-
-    scene bg uni
-    with fade
-
-    "I see my psychology teacher walking up to me..."
-
-    show teacher neutral at scale(0.6), center
-    with dissolve
-
-    teacher "I’m going to ask you a few questions so I can understand you better."
-
-    show teacher smile at scale(0.6), center
-
-    menu:
-        "Alright.":
-            pass
+    call personality_test_intro
 
     teacher "When it comes to chores,{w=0.2} what do you tend to do?"
     menu:
@@ -161,7 +142,7 @@ label personality_test_conscientiousness:
         teacher "You scored high on {b}conscientiousness{/b}."
         teacher "You’re organized and responsible.{w=0.2} Conscientiousness people tend to follow rules and prefer clean homes."
 
-    elif agreeable < 0:
+    elif conscientious < 0:
         teacher "You scored low on {b}conscientiousness{/b}."
         teacher "You’re laid back and don’t take obligations too seriously.{w=0.2} Procrastination is part of who you are."
 
@@ -178,3 +159,49 @@ label personality_test_conscientiousness:
     stop music fadeout 4
 
     jump before_class_4
+
+default open = 0
+
+label personality_test_openness:
+    call personality_test_intro
+
+    teacher "What’s your thoughts on abstract ideas?"
+    menu:
+        "I’m interested in abstract ideas.":
+            $ open += 1
+        "I have difficulty understanding abstract ideas.":
+            $ open -= 1
+
+    teacher "Interesting.{w=0.2} Next question."
+
+    teacher "How would you describe your speech?"
+    menu:
+        "I have a rich vocabulary.":
+            $ open += 1
+        "I avoid difficult words.":
+            $ open -= 1
+
+    show teacher happy at scale(0.6), center
+    teacher "Thanks for answering my questions."
+
+    if open > 0:
+        teacher "You’re {b}open{/b} to experiences."
+        teacher "You’re a daydreamer who seeks new experiences and intellectual pursuits.{w=0.2} Curious about the world, you’re eager to learn new things."
+
+    elif open < 0:
+        teacher "You’re {b}closed{/b} to experiences."
+        teacher "You’re down to earth and prefer familiar routines to new experiences.{w=0.2} You tend to be conventional with a narrower range of interests."
+
+    else:
+        teacher "You’re somewhat {b}open{/b} to experiences."
+        teacher "You keep an open mind and are realistic about new things.{w=0.2} You find a happy medium between creativity and traditional thinking."
+
+    teacher "I appreciate your honesty."
+    teacher "Openness to experience can lead to new ways of thinking."
+    show teacher happy at scale(0.6), center
+
+    teacher "See you later in class."
+
+    stop music fadeout 4
+
+    jump class_2

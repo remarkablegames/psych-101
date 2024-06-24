@@ -35,7 +35,7 @@ label class_1:
 
         "I want to learn how psychology applies to our everyday lives.":
             $ affection += 1
-            classmate "Nice."
+            classmate "Nice, that sounds exciting."
 
     "You continue to chat before the teacher interrupts you."
 
@@ -226,4 +226,4 @@ label after_class_1_hangout:
 
     stop music fadeout 4
 
-    jump class_2
+    jump personality_test_openness
