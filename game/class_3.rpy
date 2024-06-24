@@ -9,7 +9,7 @@ label class_3:
     queue music "chill_intro.ogg"
     queue music "chill_verse.ogg"
 
-    "One day, you notice [classmate.name] is a bit quieter than usual."
+    "You notice [classmate.name] is a bit quieter than usual."
 
     player "Hey [classmate.name],{w=0.3} you okay?{w=0.4} You seem a bit off today."
     classmate "{alpha=0.7}{i}(sigh){/i}{/alpha}{w=0.5} Just dealing with some stuff.{w=0.3} It’s been a tough week."
