@@ -3,13 +3,13 @@ label class_3:
     with dissolve
 
     show classmate sad at left
-    pause 0.8
-    show classmate sad at left, flip
 
     queue music "chill_intro.ogg"
     queue music "chill_verse.ogg"
 
-    "You notice [classmate.name] is a bit quieter than usual."
+    "You notice [classmate.name] is quieter than usual."
+
+    show classmate sad at left, flip
 
     player "Hey [classmate.name],{w=0.3} you okay?{w=0.4} You seem a bit off today."
     classmate "{alpha=0.7}{i}(sigh){/i}{/alpha}{w=0.5} Just dealing with some stuff.{w=0.3} It’s been a tough week."
@@ -17,7 +17,7 @@ label class_3:
     menu:
         "If you need to talk, I’m here for you.":
             $ affection += 1
-            classmate "Thanks.{w=0.1} I appreciate it."
+            classmate "Thanks,{w=0.1} I appreciate it."
 
         "We all have tough weeks, you’ll get through it.":
             $ affection -= 1
@@ -44,24 +44,59 @@ label after_class_3:
     pause 0.8
     show classmate upset at right, flip
 
-    classmate "{alpha=0.7}{i}(frustrated){/i}{/alpha}{w=0.2} I don’t know what to do anymore.{w=0.3} It just feels like everything is falling apart."
+    classmate "{alpha=0.7}{i}(frustrated){/i}{/alpha}{w=0.2} I don’t know what to do anymore.{w=0.3} It feels like everything is falling apart."
 
     menu:
-        "[classmate.name], I overheard what you were saying. Do you want to talk about it?":
+        "Reach out to see if you can help.":
             $ affection += 1
-            show classmate upset at right, unflip
-            classmate "It’s just...{w=0.3} everything feels so heavy...{w=0.3} My family is going through a lot, and I’ve been feeling really low."
 
-        "Maybe you should try to relax and take it easy.":
+            jump after_class_3_help
+
+        "Avoid being too nosy.":
             $ affection -= 1
-            show classmate upset at right, unflip
-            classmate "I wish it were that simple..."
 
-    player "I’m really sorry to hear that.{w=0.3} Have you considered talking to the school counselor?{w=0.2} They might be able to help."
+            "You feel it’s not in your place to stick your nose in [classmate.name]’s affairs."
+            "Hopefully [classmate.name]’s situation will pass after a good night’s sleep."
 
-    classmate "Maybe...{w=0.4} I just don’t know if it will change anything."
-    player "It’s worth a try.{w=0.2} Sometimes just talking to someone can make a big difference."
-    classmate "Thanks.{w=0.2} I appreciate your concern."
+            jump after_class_3_study
+
+label after_class_3_help:
+    show classmate upset at right, unflip
+
+    player "Hey [classmate.name], is everything alright?"
+
+    show classmate sad at scale(1), center
+    with dissolve
+
+    classmate "It’s just...{w=0.3} everything feels so heavy...{w=0.3} My family is going through a lot, and I’ve been feeling really low."
+    player "What happened?"
+    classmate "Buddy passed away."
+
+    menu:
+        "Who's Buddy?":
+            $ affection -= 1
+            classmate "He’s my dog..."
+            player "I’m sorry to hear."
+
+        "I’m sorry for your loss.":
+            $ affection += 1
+            classmate "..."
+
+    player "Have you considered talking to a school counselor?{w=0.2} They might be able to help."
+    classmate "Maybe...{w=0.4} I don’t know if anything will change."
+    player "It’s worth a try.{w=0.2} Sometimes talking to someone is enough and can make a difference."
+    classmate "Thanks, I’ll keep that in mind."
+
+label after_class_3_study:
+    stop music fadeout 2
+
+    scene black
+    with fade
+
+    play music "sad8_outro.ogg" fadein 1
+
+    "You went back home to do some studying, but something doesn’t sit right with you."
+    "You decide to shower and go to bed early."
 
     stop music fadeout 4
 
