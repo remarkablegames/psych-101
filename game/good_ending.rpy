@@ -7,7 +7,7 @@ label good_ending:
 
     classmate "I’m sorry I’m late.{w=0.2} I had an appointment with the counselor this morning."
 
-    player "{alpha=0.7}{i}(thinking){/i}{/alpha}{w=0.1} Thank God she’s okay."
+    player "{alpha=0.7}{i}(thinking){/i}{/alpha}{w=0.1} Thank goodness she’s okay."
 
     # put counselor/therapist's office background below
     scene bg uni
@@ -22,7 +22,7 @@ label good_ending:
 
     show classmate smile at scale(0.8), left, flip
 
-    classmate "Thank you.{w=0.2} I feel like I have more hope now."
+    classmate "Thank you,{w=0.1} I feel like I have more hope now."
 
     scene bg lecturehall
     with dissolve

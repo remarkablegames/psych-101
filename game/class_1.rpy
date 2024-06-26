@@ -215,7 +215,7 @@ label after_class_1_hangout:
             player "Don’t worry{w=0.1}, you’re still young.{w=0.2} You have the time to figure things out."
             show classmate smile at right
             classmate "I hope so."
-            "You and [classmate.name] spend the remaining time staring at the clouds before parting ways."
+            "You and [classmate.name] spent some time staring at clouds before parting ways."
 
         "You text your friends to see what they’re doing.":
             $ affection -= 1
