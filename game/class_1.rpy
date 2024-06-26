@@ -147,7 +147,7 @@ label after_class_1_break:
             $ affection += 1
             classmate "I enjoy reading and painting. It’s a good way to relax."
 
-        "Did you read the report that mental illness is going up?":
+        "Did you read the report that the amount of people diagnosed with a mental illness is increasing?":
             $ affection -= 1
             show classmate surprised
             classmate "I haven’t. That’s worrisome."
@@ -221,8 +221,9 @@ label after_class_1_hangout:
             $ affection -= 1
             show classmate sad at right
             classmate "Oh,{w=0.1} are you bored?{w=0.2} We can leave."
-            player "I got some errands to do."
+            player "I have some errands I need to run."
             classmate "Alright,{w=0.2} I’ll see you in class tomorrow."
+            "You and [classmate.name] then part ways for the day."
 
     stop music fadeout 4
 

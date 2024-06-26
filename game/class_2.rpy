@@ -45,13 +45,51 @@ label class_2:
     classmate "Actually, yes. I’m struggling a bit with our psychology assignment."
 
     menu:
-        "You’re doing great, [classmate.name]. Keep it up!":
-            $ affection += 1
-            classmate "Thanks, [player_name]. Your support means a lot."
+        "It's definitely a tough one. We'll need all the luck we can get.":
+            $ affection -= 1
+            classmate "Even that might not be enough."
+            "You and [classmate.name] walk away anxiously."
 
         "I find that making flashcards helps. Maybe we can create some together?":
-            $ affection -= 1
+            $ affection += 2
             classmate "That’s a great idea!"
+
+            jump after_class_2_study
+
+label after_class_2_study:
+    scene black
+    queue music ["sad4_verse.ogg", "sad4_hook.ogg"]
+
+    "You and [classmate.name] begin making flash cards to study for the upcoming assignment on memory."
+
+    player "I believe in us. We've got this. Okay, which one is first?"
+
+    classmate "Let's see... How's this for our first flashcard:{w=0.3} Semantic memory{w=0.3} is the component of long-term memory{w=0.3} responsible for storing general world knowledge."
+    menu:
+        "True":
+            classmate "That's correct!"
+
+        "False":
+            classmate "No, that's false.{w=0.1} Let's go over that again later."
+    
+    classmate "Okay, here's the next one: Psychologists distinguish between three necessary stages in the learning and memory process:{w=0.3} encoding,{w=0.3} dispersal,{w=0.3} and retrieval."
+    menu:
+        "True":
+            classmate "That's false.{w=0.3} The three stages are encoding,{w=0.3} storage,{w=0.3} and retrieval."
+
+        "False":
+            classmate "Correct. Well done!{w=0.3} The three stages are encoding,{w=0.3} storage,{w=0.3} and retrieval."
+
+    classmate "How about this one... Ready?"
+    classmate "A memory-enhancing strategy,{w=0.3} called elaborative rehearsal,{w=0.3} is a type of memory rehearsal that is useful in transferring information into long-term memory."
+    menu:
+        "True":
+            classmate "Correct. You're doing well!"
+
+        "False":
+            classmate "This one is true."
+    
+    "You and [classmate.name] left the library after a few hours, drained, but feeling productive."
 
     stop music fadeout 4
 

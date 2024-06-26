@@ -78,7 +78,7 @@ label after_class_3_help:
             classmate "He’s my dog..."
             player "I’m sorry to hear."
 
-        "I’m sorry for your loss.":
+        "I’m so sorry for your loss.":
             $ affection += 1
             classmate "..."
 
