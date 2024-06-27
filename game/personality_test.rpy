@@ -1,13 +1,14 @@
-label personality_test_intro:
-    queue music "lofi_verse.ogg"
+label personality_test_intro(start=False):
+    if not start:
+        queue music "lofi_verse.ogg"
 
-    scene bg uni
-    with fade
+        scene bg uni
+        with fade
 
-    "I see my psychology teacher walking up to me..."
+        "I see my psychology teacher walking up to me..."
 
-    show teacher neutral at scale(0.6), center
-    with dissolve
+        show teacher neutral at scale(0.6), center
+        with dissolve
 
     teacher "I’m going to ask you a few questions so I can understand you better."
 
@@ -22,7 +23,7 @@ label personality_test_intro:
 default extrovert = 0
 
 label personality_test_extraversion:
-    call personality_test_intro
+    call personality_test_intro(start=True)
 
     teacher "It’s Friday night and raining.{w=0.2} What are you thinking?"
     menu:
