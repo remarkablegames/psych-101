@@ -30,11 +30,14 @@ label class_2:
 
     stop music fadeout 4
 
-    scene bg uni
-    with dissolve
+    jump after_class_2
 
+label after_class_2:
     queue music "sad1_intro.ogg"
     queue music "sad1_verse.ogg"
+
+    scene bg uni
+    with dissolve
 
     "You find yourself strolling with [classmate.name] after class."
 
@@ -57,8 +60,12 @@ label class_2:
             jump after_class_2_study
 
 label after_class_2_study:
+    stop music fadeout 4
+
+    play music "sad9_intro.ogg"
+    queue music ["sad9_verse.ogg", "sad9_hook.ogg"]
+
     scene black
-    queue music ["sad4_verse.ogg", "sad4_hook.ogg"]
 
     "You and [classmate.name] begin making flash cards to study for the upcoming assignment on memory."
 
