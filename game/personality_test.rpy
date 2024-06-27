@@ -20,7 +20,7 @@ label personality_test_intro(start=False):
 
     return
 
-default extrovert = 0
+default extraversion = 0
 
 label personality_test_extraversion:
     call personality_test_intro(start=True)
@@ -28,27 +28,27 @@ label personality_test_extraversion:
     teacher "It’s Friday night and raining.{w=0.2} What are you thinking?"
     menu:
         "Let’s go out, spending the night inside would be a waste!":
-            $ extrovert += 1
+            $ extraversion += 1
         "What a perfect excuse to cancel plans and stay at home!":
-            $ extrovert -= 1
+            $ extraversion -= 1
 
     teacher "Interesting.{w=0.2} Next question."
 
     teacher "You’re at a coffee shop.{w=0.2} The only available seat is in front of a stranger."
     menu:
         "That’s okay, I can make some chit-chat.":
-            $ extrovert += 1
+            $ extraversion += 1
         "I’ll down my drink and then head out.":
-            $ extrovert -= 1
+            $ extraversion -= 1
 
     show teacher happy at scale(0.6), center
     teacher "Thanks for answering my questions."
 
-    if extrovert > 0:
+    if extraversion > 0:
         teacher "Based on my analysis,{w=0.2} you’re an {b}extrovert{/b}."
         teacher "Conversation is your finest skill.{w=0.2} You don’t know what awkward situations are,{w=0.1} or how they happen to people."
 
-    elif extrovert < 0:
+    elif extraversion < 0:
         teacher "Based on my analysis,{w=0.2} you’re an {b}introvert{/b}."
         teacher "Solitude and silence are what you long for.{w=0.2} Books, films, and music may be your best friends,{w=0.1} along with your neighbor’s cat."
 
@@ -69,7 +69,7 @@ label personality_test_extraversion:
 
     jump class_1
 
-default agreeable = 0
+default agreeableness = 0
 
 label personality_test_agreeableness:
     call personality_test_intro
@@ -77,27 +77,27 @@ label personality_test_agreeableness:
     teacher "If a new person joined your group of friends for dinner,{w=0.2} what would you do next?"
     menu:
         "Make the new person feel at ease.":
-            $ agreeable += 1
+            $ agreeableness += 1
         "Let the new person figure things out.":
-            $ agreeable -= 1
+            $ agreeableness -= 1
 
     teacher "Interesting.{w=0.2} Next question."
 
     teacher "If a colleague wanted to discuss life problems with you,{w=0.2} what’s your response?"
     menu:
         "Take the time to sympathize with your friend.":
-            $ agreeable += 1
+            $ agreeableness += 1
         "Change the subject.":
-            $ agreeable -= 1
+            $ agreeableness -= 1
 
     show teacher happy at scale(0.6), center
     teacher "Thanks for answering my questions."
 
-    if agreeable > 0:
+    if agreeableness > 0:
         teacher "You scored high on {b}agreeableness{/b}."
         teacher "You adjust your behavior to suit others.{w=0.2} Agreeable people are generally friendly, polite, and cooperative."
 
-    elif agreeable < 0:
+    elif agreeableness < 0:
         teacher "You scored low on {b}agreeableness{/b}."
         teacher "You tend to put yourself first and “tell it like it is.”{w=0.2} You also have a more competitive nature."
 
@@ -115,7 +115,7 @@ label personality_test_agreeableness:
 
     jump class_3
 
-default conscientious = 0
+default conscientiousness = 0
 
 label personality_test_conscientiousness:
     call personality_test_intro
@@ -123,27 +123,27 @@ label personality_test_conscientiousness:
     teacher "When it comes to chores,{w=0.2} what do you tend to do?"
     menu:
         "Get them done right away.":
-            $ conscientious += 1
+            $ conscientiousness += 1
         "Avoid doing them if possible.":
-            $ conscientious -= 1
+            $ conscientiousness -= 1
 
     teacher "Interesting.{w=0.2} Next question."
 
     teacher "After taking something out of the drawer,{w=0.2} what do you do once you’re done with it?"
     menu:
         "I would put it back in its proper place.":
-            $ conscientious += 1
+            $ conscientiousness += 1
         "I would leave it lying around.":
-            $ conscientious -= 1
+            $ conscientiousness -= 1
 
     show teacher happy at scale(0.6), center
     teacher "Thanks for answering my questions."
 
-    if conscientious > 0:
+    if conscientiousness > 0:
         teacher "You scored high on {b}conscientiousness{/b}."
         teacher "You’re organized and responsible.{w=0.2} Conscientiousness people tend to follow rules and prefer clean homes."
 
-    elif conscientious < 0:
+    elif conscientiousness < 0:
         teacher "You scored low on {b}conscientiousness{/b}."
         teacher "You’re laid back and don’t take obligations too seriously.{w=0.2} Procrastination is part of who you are."
 
@@ -159,7 +159,7 @@ label personality_test_conscientiousness:
 
     stop music fadeout 4
 
-default open = 0
+default openness = 0
 
 label personality_test_openness:
     call personality_test_intro
@@ -167,27 +167,27 @@ label personality_test_openness:
     teacher "What’s your thoughts on abstract ideas?"
     menu:
         "I’m interested in abstract ideas.":
-            $ open += 1
+            $ openness += 1
         "I have difficulty understanding abstract ideas.":
-            $ open -= 1
+            $ openness -= 1
 
     teacher "Interesting.{w=0.2} Next question."
 
     teacher "How would you describe your speech?"
     menu:
         "I have a rich vocabulary.":
-            $ open += 1
+            $ openness += 1
         "I avoid difficult words.":
-            $ open -= 1
+            $ openness -= 1
 
     show teacher happy at scale(0.6), center
     teacher "Thanks for answering my questions."
 
-    if open > 0:
+    if openness > 0:
         teacher "You’re {b}open{/b} to experiences."
         teacher "You’re a daydreamer who seeks new experiences and intellectual pursuits.{w=0.2} Curious about the world, you’re eager to learn new things."
 
-    elif open < 0:
+    elif openness < 0:
         teacher "You’re {b}closed{/b} to experiences."
         teacher "You’re down to earth and prefer familiar routines to new experiences.{w=0.2} You tend to be conventional with a narrower range of interests."
 
@@ -205,7 +205,7 @@ label personality_test_openness:
 
     jump class_2
 
-default neurotic = 0
+default neuroticism = 0
 
 label personality_test_neuroticism:
     call personality_test_intro
@@ -213,27 +213,27 @@ label personality_test_neuroticism:
     teacher "How would you describe yourself?"
     menu:
         "I get stressed out easily.":
-            $ neurotic += 1
+            $ neuroticism += 1
         "I’m relaxed most of the time.":
-            $ neurotic -= 1
+            $ neuroticism -= 1
 
     teacher "Interesting.{w=0.2} Next question."
 
     teacher "How often does your mood change?"
     menu:
         "I change my mood a lot.":
-            $ neurotic += 1
+            $ neuroticism += 1
         "My mood stays the same.":
-            $ neurotic -= 1
+            $ neuroticism -= 1
 
     show teacher happy at scale(0.6), center
     teacher "Thanks for answering my questions."
 
-    if neurotic > 0:
+    if neuroticism > 0:
         teacher "Based on my assessment, you’re {b}neurotic{/b}."
         teacher "You’re an emotional person and tend to experience feelings like anxiety and worry."
 
-    elif neurotic < 0:
+    elif neuroticism < 0:
         teacher "Based on my assessment, you’re {b}not neurotic{/b}."
         teacher "You’re emotionally stable and less reactive to stress."
 
