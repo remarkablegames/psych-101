@@ -100,4 +100,4 @@ label after_class_3_study:
 
     stop music fadeout 4
 
-    jump personality_test_conscientiousness
+    jump personality_test_neuroticism

@@ -159,8 +159,6 @@ label personality_test_conscientiousness:
 
     stop music fadeout 4
 
-    jump before_class_4
-
 default open = 0
 
 label personality_test_openness:
@@ -206,3 +204,49 @@ label personality_test_openness:
     stop music fadeout 4
 
     jump class_2
+
+default neurotic = 0
+
+label personality_test_neuroticism:
+    call personality_test_intro
+
+    teacher "How would you describe yourself?"
+    menu:
+        "I get stressed out easily.":
+            $ neurotic += 1
+        "I’m relaxed most of the time.":
+            $ neurotic -= 1
+
+    teacher "Interesting.{w=0.2} Next question."
+
+    teacher "How often does your mood change?"
+    menu:
+        "I change my mood a lot.":
+            $ neurotic += 1
+        "My mood stays the same.":
+            $ neurotic -= 1
+
+    show teacher happy at scale(0.6), center
+    teacher "Thanks for answering my questions."
+
+    if neurotic > 0:
+        teacher "Based on my assessment, you’re {b}neurotic{/b}."
+        teacher "You’re an emotional person and tend to experience feelings like anxiety and worry."
+
+    elif neurotic < 0:
+        teacher "Based on my assessment, you’re {b}not neurotic{/b}."
+        teacher "You’re emotionally stable and less reactive to stress."
+
+    else:
+        teacher "Based on my assessment, you’re {b}somewhat neurotic{/b}."
+        teacher "You’re someone who may be affected by emotions depending on the circumstances."
+
+    teacher "I appreciate your honesty."
+    teacher "Too much of anything is bad for you,{w=0.1} so learning how to deal with one’s emotions is important for one’s mental health."
+    show teacher happy at scale(0.6), center
+
+    teacher "See you later in class."
+
+    stop music fadeout 4
+
+    jump before_class_4
