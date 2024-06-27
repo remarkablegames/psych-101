@@ -1,10 +1,11 @@
 label bad_ending:
+    stop music fadeout 1
     play sound "piano_oneshot.ogg" volume 0.5
 
     player "A chill runs down your spine." with hpunch
 
-    scene bg meadow
-    with dissolve
+    scene bg funeral
+    with fade
 
     queue music "sad3_verse.ogg"
 

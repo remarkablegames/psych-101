@@ -1,8 +1,8 @@
 label before_class_4:
     queue music "sad2_intro.ogg"
 
-    scene bg meadow
-    with dissolve
+    scene bg living room night
+    with fade
 
     "Later that evening, you check social media and see a post from [classmate.name]."
     classmate "“Sometimes I wonder if it’s all worth it.{w=0.4} Life just feels like one big mess.”"
@@ -27,7 +27,7 @@ label before_class_4:
 
 label class_4:
     scene bg lecturehall
-    with dissolve
+    with fade
 
     queue music "tense_intro.ogg"
     queue music "tense_verse.ogg"
@@ -42,8 +42,6 @@ label class_4:
     player "..."
     player "{alpha=0.7}{i}(thinking){/i}{/alpha}{w=0.1} No,{w=0.2} it can’t be her."
     teacher "For the privacy of the individual,{w=0.1} we’re unable to share any news.{w=0.1} But please be respectful for the time being."
-
-    stop music fadeout 1
 
     if affection > 0:
         jump good_ending
