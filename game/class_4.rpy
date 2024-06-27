@@ -10,8 +10,9 @@ label before_class_4:
     queue music ["sad2_verse.ogg", "sad2_bridge.ogg"]
 
     menu:
-        "Hey, I saw your post. I’m really concerned about you. Please, let’s talk.":
+        "Reach out to [classmate.name].":
             $ affection += 1
+            player "Hey [classmate.name],{w=0.1} I saw your post.{w=0.2} I’m really concerned about you.{w=0.2} Please,{w=0.1} let’s talk."
             classmate ".{w=0.2}.{w=0.2}.{w=0.2}"
             classmate "Thanks for reaching out.{w=0.2} I’m just really struggling right now."
             player "Remember what we talked about today?{w=0.2} Maybe talking to the counselor could help.{w=0.1} I can go with you if you want."
