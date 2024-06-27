@@ -49,7 +49,7 @@ label class_1:
     jump after_class_1
 
 label after_class_1:
-    scene bg uni
+    scene bg school
     with fade
 
     "You find yourself strolling with [classmate.name] after class."
@@ -108,7 +108,7 @@ label after_class_1:
 label after_class_1_break:
     stop music fadeout 4
 
-    scene bg club
+    scene bg restaurant
     with dissolve
 
     play music ["sad8_verse.ogg", "sad8_hook.ogg"]
@@ -175,7 +175,7 @@ label after_class_1_study:
     jump after_class_1_hangout
 
 label after_class_1_hangout:
-    scene bg meadow
+    scene bg park
     with dissolve
 
     queue music "sad14_refrain.ogg"

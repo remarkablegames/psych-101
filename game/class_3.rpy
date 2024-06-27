@@ -78,10 +78,10 @@ label after_class_3_help:
             classmate "He’s my dog..."
             player "I’m sorry to hear."
 
-        "I’m so sorry for your loss.":
+        "I’m sorry to hear.":
             $ affection += 1
-            classmate "..."
 
+    classmate "..."
     player "Have you considered talking to a school counselor?{w=0.2} They might be able to help."
     classmate "Maybe...{w=0.4} I don’t know if anything will change."
     player "It’s worth a try.{w=0.2} Sometimes talking to someone is enough and can make a difference."

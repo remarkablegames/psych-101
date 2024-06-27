@@ -36,8 +36,8 @@ label after_class_2:
     queue music "sad1_intro.ogg"
     queue music "sad1_verse.ogg"
 
-    scene bg uni
-    with dissolve
+    scene bg school
+    with fade
 
     "You find yourself strolling with [classmate.name] after class."
 
@@ -48,7 +48,7 @@ label after_class_2:
     classmate "Actually, yes. I’m struggling a bit with our psychology assignment."
 
     menu:
-        "It's definitely a tough one. We'll need all the luck we can get.":
+        "It’s definitely a tough one. We’ll need all the luck we can get.":
             $ affection -= 1
             classmate "Even that might not be enough."
             "You and [classmate.name] walk away anxiously."
@@ -62,41 +62,48 @@ label after_class_2:
 label after_class_2_study:
     stop music fadeout 4
 
+    scene bg library
+    with fade
+
     play music "sad9_intro.ogg"
     queue music ["sad9_verse.ogg", "sad9_hook.ogg"]
 
-    scene black
+    show classmate smile at flip
+    with dissolve
 
-    "You and [classmate.name] begin making flash cards to study for the upcoming assignment on memory."
+    "You and [classmate.name] begin making flashcards to study for the upcoming assignment on memory."
 
-    player "I believe in us. We've got this. Okay, which one is first?"
+    player "I believe in us. We’ve got this. Okay, which one is first?"
 
-    classmate "Let's see... How's this for our first flashcard:{w=0.3} Semantic memory{w=0.3} is the component of long-term memory{w=0.3} responsible for storing general world knowledge."
+    classmate "Let’s see... How’s this for our first flashcard:{w=0.2} Semantic memory is the component of long-term memory responsible for storing general world knowledge."
+
     menu:
         "True":
-            classmate "That's correct!"
+            classmate "That’s correct!"
 
         "False":
-            classmate "No, that's false.{w=0.1} Let's go over that again later."
-    
-    classmate "Okay, here's the next one: Psychologists distinguish between three necessary stages in the learning and memory process:{w=0.3} encoding,{w=0.3} dispersal,{w=0.3} and retrieval."
+            classmate "No, that’s false.{w=0.1} Let’s go over that again later."
+
+    classmate "Okay, here’s the next one: Psychologists distinguish between three necessary stages in the learning and memory process: encoding, dispersal, and retrieval."
+
     menu:
         "True":
-            classmate "That's false.{w=0.3} The three stages are encoding,{w=0.3} storage,{w=0.3} and retrieval."
+            classmate "That’s false.{w=0.2} The three stages are encoding, storage, and retrieval."
 
         "False":
-            classmate "Correct. Well done!{w=0.3} The three stages are encoding,{w=0.3} storage,{w=0.3} and retrieval."
+            classmate "Correct!{w=0.2} The three stages are encoding, storage, and retrieval."
 
     classmate "How about this one... Ready?"
-    classmate "A memory-enhancing strategy,{w=0.3} called elaborative rehearsal,{w=0.3} is a type of memory rehearsal that is useful in transferring information into long-term memory."
+    classmate "A memory-enhancing strategy,{w=0.1} called elaborative rehearsal,{w=0.1} is a type of memory rehearsal that is useful in transferring information into long-term memory."
+
     menu:
         "True":
-            classmate "Correct. You're doing well!"
+            classmate "Correct, you’re doing well!"
 
         "False":
             classmate "This one is true."
-    
-    "You and [classmate.name] left the library after a few hours, drained, but feeling productive."
+
+    "You and [classmate.name] spend a few more hours at the library before leaving on a productive note."
 
     stop music fadeout 4
 

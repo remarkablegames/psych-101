@@ -18,8 +18,10 @@ Play the game on:
 
 ### Art
 
-- [Withoutpenorpaper](https://witpop.itch.io/sprite-pack-female-pink-hair)
 - [Lia](https://liah0227.itch.io/hoshiko)
+- [Noraneko Games](https://noranekogames.itch.io/yumebackground)
+- [Studio Mugenjohncel](https://lemmasoft.renai.us/forums/viewtopic.php?t=17302)
+- [Withoutpenorpaper](https://witpop.itch.io/sprite-pack-female-pink-hair)
 - [renpytom](https://github.com/renpy/renpy/tree/master/the_question/game/images)
 
 ### Sound
