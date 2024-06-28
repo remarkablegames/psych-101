@@ -40,6 +40,22 @@ label personality_test_extraversion:
             $ extraversion += 1
         "I’ll down my drink and then head out.":
             $ extraversion -= 1
+    
+    teacher "Let’s continue.{w=0.2} You’re invited to a party where you only know the host."
+    menu:
+        "Great! A chance to meet new people and have fun!":
+            $ extraversion += 1
+        "I'll make an appearance, but won’t stay long.":
+            $ extraversion -= 1
+
+    teacher "Noted.{w=0.2} Here’s the final question."
+
+    teacher "You’re in a group project.{w=0.2} How do you prefer to work?"
+    menu:
+        "Collaborate closely with everyone, sharing ideas and brainstorming together.":
+            $ extraversion += 1
+        "Divide the tasks so I can work on my part independently.":
+            $ extraversion -= 1
 
     show teacher happy at scale(0.6), center
     teacher "Thanks for answering my questions."
