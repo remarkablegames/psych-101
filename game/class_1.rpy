@@ -60,16 +60,16 @@ label after_class_1:
     with dissolve
 
     player "What did you think of Pavlov’s dog?"
-    classmate "It’s pretty cute!"
+    classmate "It’s very interesting!"
     classmate "How about you?"
 
     menu:
-        "Dogs are my best friends!":
+        "Agreed. Plus, I love dogs!":
             $ affection += 1
             show classmate surprised
             classmate "Amazing."
 
-        "Eh, not a big fan of dogs.":
+        "Eh, I thought it was boring. I'm also not a fan of dogs.":
             $ affection -= 1
             show classmate sad
             classmate "I see."
