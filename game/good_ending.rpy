@@ -3,7 +3,7 @@ label good_ending:
     play music "tropical_house1_intro.ogg" fadein 4
     queue music "tropical_house1_verse.ogg"
 
-    show teacher sadder at scale(0.6), right
+    show teacher very sad at scale(0.6), right
     with move
 
     show classmate smile at scale(0.8), left, flip

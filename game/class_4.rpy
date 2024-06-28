@@ -35,7 +35,7 @@ label class_4:
     "You get to class the next day and notice that [classmate.name] is absent. The room feels tense."
     player "{alpha=0.7}{i}(thinking){/i}{/alpha}{w=0.1} Where’s [classmate.name]?{w=0.2} She said she’d be here today."
 
-    show teacher sadder at scale(0.6), center
+    show teacher very sad at scale(0.6), center
     with dissolve
 
     teacher "I don’t know how to say this,{w=0.3} but one of our classmates took her own life last night."
