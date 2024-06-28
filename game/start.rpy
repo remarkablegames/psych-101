@@ -29,7 +29,7 @@ label start:
 
     # Ask for the player's age.
     teacher "How old are you?"
-    $ player_age = int(renpy.input("My age is...", length=3, allow="0123456789"))
+    $ player_age = int(renpy.input("My age is...", length=3, allow="0123456789") or 0)
 
     if player_age < 18:
         show teacher annoyed at scale(0.6), center
