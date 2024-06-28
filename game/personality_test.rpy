@@ -129,7 +129,7 @@ label personality_test_agreeableness:
 
     stop music fadeout 4
 
-    jump class_3
+    jump class_5
 
 default conscientiousness = 0
 
@@ -265,4 +265,4 @@ label personality_test_neuroticism:
 
     stop music fadeout 4
 
-    jump before_class_4
+    jump before_class_5
