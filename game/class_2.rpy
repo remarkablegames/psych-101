@@ -26,7 +26,7 @@ label class_2:
     show teacher normal at scale(0.6), right
     with moveinright
 
-    "Before you can say anything, class begins and the teacher discusses the importance of mental health awareness. You notice [classmate.name] paying attention and taking notes."
+    teacher "Class is starting.{w=0.2} Today we’re going to learn about the magical number seven plus or minus two."
 
     stop music fadeout 4
 
@@ -45,17 +45,28 @@ label after_class_2:
     with dissolve
 
     player "Need help with any subjects?"
-    classmate "Actually, yes. I’m struggling a bit with our psychology assignment."
+    classmate "Actually, yes. I’m struggling with our psychology assignment."
 
     menu:
-        "It’s definitely a tough one. We’ll need all the luck we can get.":
+        "You need to spend more time studying.":
             $ affection -= 1
-            classmate "Even that might not be enough."
+
+            classmate embarrassed "Even that might not be enough."
             "You and [classmate.name] walk away anxiously."
 
-        "I find that making flashcards helps. Maybe we can create some together?":
+            scene black
+            with fade
+
+            "You go home and study for a bit before heading to bed."
+
+            stop music fadeout 4
+
+            jump personality_test_agreeableness
+
+        "Want to create flashcards together?":
             $ affection += 2
-            classmate "That’s a great idea!"
+
+            classmate surprised "That’s a great idea!"
 
             jump after_class_2_study
 
@@ -73,37 +84,47 @@ label after_class_2_study:
 
     "You and [classmate.name] begin making flashcards to study for the upcoming assignment on memory."
 
-    player "I believe in us. We’ve got this. Okay, which one is first?"
+    player "I believe in us. We got this. Okay, which one is first?"
 
-    classmate "Let’s see... How’s this for our first flashcard:{w=0.2} Semantic memory is the component of long-term memory responsible for storing general world knowledge."
+    classmate "Let’s see...{w=0.2} How’s this for our first flashcard."
 
     menu:
+        classmate "{i}Semantic memory{/i} is the component of long-term memory responsible for storing general world knowledge."
+
         "True":
             classmate "That’s correct!"
 
         "False":
-            classmate "No, that’s false.{w=0.1} Let’s go over that again later."
+            classmate surprised "No, that’s false.{w=0.1} Let’s go over that again later."
 
-    classmate "Okay, here’s the next one: Psychologists distinguish between three necessary stages in the learning and memory process: encoding, dispersal, and retrieval."
-
-    menu:
-        "True":
-            classmate "That’s false.{w=0.2} The three stages are encoding, storage, and retrieval."
-
-        "False":
-            classmate "Correct!{w=0.2} The three stages are encoding, storage, and retrieval."
-
-    classmate "How about this one... Ready?"
-    classmate "A memory-enhancing strategy,{w=0.1} called elaborative rehearsal,{w=0.1} is a type of memory rehearsal that is useful in transferring information into long-term memory."
+    classmate smile "Okay,{w=0.1} here’s the next one."
 
     menu:
+        "What are the three stages in the learning and memory process?"
+
+        "Encoding, dispersal, and retrieval.":
+            classmate surprised "That’s incorrect.{w=0.2} The three stages are: {i}encoding{/i}, {i}storage{/i}, and {i}retrieval{/i}."
+
+        "Encoding, storage, and retrieval.":
+            classmate "That’s correct!{w=0.2} The three stages are: {i}encoding{/i}, {i}storage{/i}, and {i}retrieval{/i}."
+
+        "Encoding, decoding, and formation.":
+            classmate surprised "That’s incorrect.{w=0.2} The three stages are: {i}encoding{/i}, {i}storage{/i}, and {i}retrieval{/i}."
+
+    classmate smile "How about this one?"
+
+    menu:
+        "A memory-enhancing strategy, called {i}elaborative rehearsal{/i}, is a type of memory rehearsal that is useful in transferring information into long-term memory."
+
         "True":
             classmate "Correct, you’re doing well!"
 
         "False":
-            classmate "This one is true."
+            classmate surprised "The correct answer is true."
 
-    "You and [classmate.name] spend a few more hours at the library before leaving on a productive note."
+    show classmate smile
+
+    "You and [classmate.name] spend a few more hours at the library before leaving feeling productive."
 
     stop music fadeout 4
 
