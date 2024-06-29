@@ -23,7 +23,7 @@ label class_4:
             $ affection -= 1
             classmate "Yeah, I guess..."
 
-    show teacher normal at scale(0.6), right
+    show teacher talking at scale(0.6), right
 
     "Class begins, but you can’t help but notice [classmate.name]’s distracted state.{w=0.2} The teacher discusses the importance of mental health awareness, which deeply resonates with you."
 

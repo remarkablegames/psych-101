@@ -23,7 +23,7 @@ label class_2:
             show classmate surprised at left, flip
             classmate "Oh, anything you want to talk about?"
 
-    show teacher normal at scale(0.6), right
+    show teacher talking at scale(0.6), right
     with moveinright
 
     teacher "Class is starting.{w=0.2} Today we’re going to learn about the magical number seven plus or minus two."

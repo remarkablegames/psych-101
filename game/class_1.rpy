@@ -23,7 +23,7 @@ label class_1:
     show classmate smile at left, flip
 
     classmate "Hi, I’m [classmate.name],{w=0.1} nice to meet you."
-    player "Nice to meet you,{w=0.1} I’m [player_name]."
+    player "Nice to meet you too,{w=0.1} I’m [player_name]."
     player "What brings you to Psych 101?"
     classmate "I’m interested in positive psychology."
     classmate "And you?"
@@ -32,17 +32,27 @@ label class_1:
         "I’m here for the easy A.":
             $ affection -= 1
             classmate "Haha, aren’t we all?"
+            classmate @ shy "But I hear the exams are pretty tough."
+            player "Oh, I didn't know about that."
+            player "I enrolled since I saw the class ratings were pretty high."
+            classmate "We’ll get through it."
+            player "For sure!"
 
         "I want to learn how psychology applies to our everyday lives.":
             $ affection += 1
             classmate @ surprised "Nice, that sounds exciting."
+            classmate "I also want to learn how to be a stronger person by understanding my psychology."
+            player "How so?"
+            classmate embarrassed "Like how to manage my emotions and think more optimistically."
+            player "That’s a great goal."
+            classmate smile "Haha, thanks."
 
-    "You continue to chat before the teacher interrupts you."
+    "You chat for a bit more before the teacher interrupts you."
 
     show classmate smile at left, scale(0.8)
     with dissolve
 
-    show teacher normal at scale(0.6), right
+    show teacher talking at scale(0.6), right
     with moveinright
 
     teacher "Alright, class is starting.{w=0.2} Today we’re going to learn about Pavlov’s dog."
@@ -55,17 +65,16 @@ label after_class_1:
     scene bg school
     with fade
 
-    play sound school_bell volume 0.3
-
-    "After class, you take a stroll with [classmate.name] at the school campus."
-
+    play sound school_bell volume 0.15
     queue music [sad4_verse, sad4_hook]
+
+    "After class ends, you take a quick stroll with [classmate.name] on the school campus."
 
     show classmate smile
     with dissolve
 
     player "What did you think of Pavlov’s dog?"
-    classmate "It’s very interesting!"
+    classmate "Super interesting!"
     classmate "How about you?"
 
     menu:
@@ -84,16 +93,17 @@ label after_class_1:
             classmate "Yep, I have a Golden Retriever."
             player "What’s his name?"
             classmate "His name is Buddy and he’s 13 years old."
+            player "Isn’t that old in dog years?"
+            classmate "Yep, but he’s still going strong!{w=0.2} I can’t see myself without my best bud."
 
         "Talk about class.":
             player "What did you think of the lesson?"
             classmate "Pretty good!{w=0.2} Just trying to keep up with everything."
-            player "I find it interesting how animals can be conditioned to a stimulus."
-            classmate "Indeed."
-
-    play sound school_bell volume 0.3
-
-    "The school bell rings."
+            player "It’s interesting how animals can be conditioned to a stimulus."
+            classmate surprised "Like how we can train dogs to do almost anything?"
+            player "Yeah, I wonder about the things we’re conditioned to that we don’t realize."
+            classmate smile "Good question.{w=0.2} It’s probably more than what is expected."
+            player "For sure."
 
     menu:
         "Want to grab a snack?":

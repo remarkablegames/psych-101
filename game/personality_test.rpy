@@ -2,21 +2,29 @@ label personality_test_intro(start=False):
     if not start:
         queue music lofi_verse
 
-        scene bg uni
+        scene bg school hallway
         with fade
 
         "I see my psychology teacher walking up to me..."
 
-        show teacher neutral at scale(0.6), center
+        show teacher at scale(0.6), center
         with dissolve
 
-    teacher "I’m going to ask you a few questions so I can understand you better."
-
-    show teacher smile at scale(0.6), center
+    teacher talking "I’m going to ask you a few questions so I can understand you better."
 
     menu:
         "Let’s do it!":
             pass
+
+    show teacher smile
+
+    return
+
+label personality_test_outro:
+    teacher "See you later in class."
+
+    stop music fadeout 4
+    play sound school_bell volume 0.15
 
     return
 
@@ -57,8 +65,7 @@ label personality_test_extraversion:
         "Divide the tasks so I can work on my part independently.":
             $ extraversion -= 1
 
-    show teacher happy at scale(0.6), center
-    teacher "Thanks for answering my questions."
+    teacher open smile "Thanks for answering my questions."
 
     if extraversion > 0:
         teacher "Based on my analysis,{w=0.2} you’re an {b}extrovert{/b}."
@@ -72,16 +79,10 @@ label personality_test_extraversion:
         teacher "Based on my analysis,{w=0.2} you’re an {b}ambivert{/b}."
         teacher "A social chameleon.{w=0.2} Your mood changes with the seasons.{w=0.2} Your indecisiveness makes you alluring."
 
-    show teacher smile at scale(0.6), center
-
-    teacher "I appreciate your honesty."
+    teacher smile "I appreciate your honesty."
     teacher "Remember that knowing yourself is half the battle."
 
-    show teacher happy at scale(0.6), center
-
-    teacher "See you later in class."
-
-    stop music fadeout 4
+    call personality_test_outro
 
     jump class_1
 
@@ -106,8 +107,7 @@ label personality_test_agreeableness:
         "Change the subject.":
             $ agreeableness -= 1
 
-    show teacher happy at scale(0.6), center
-    teacher "Thanks for answering my questions."
+    teacher open smile "Thanks for answering my questions."
 
     if agreeableness > 0:
         teacher "You scored high on {b}agreeableness{/b}."
@@ -123,11 +123,8 @@ label personality_test_agreeableness:
 
     teacher "I appreciate your honesty."
     teacher "Learning how to interact with others is key to subsisting in society."
-    show teacher happy at scale(0.6), center
 
-    teacher "See you later in class."
-
-    stop music fadeout 4
+    call personality_test_outro
 
     jump class_5
 
@@ -152,8 +149,7 @@ label personality_test_conscientiousness:
         "I would leave it lying around.":
             $ conscientiousness -= 1
 
-    show teacher happy at scale(0.6), center
-    teacher "Thanks for answering my questions."
+    teacher open smile "Thanks for answering my questions."
 
     if conscientiousness > 0:
         teacher "You scored high on {b}conscientiousness{/b}."
@@ -169,11 +165,8 @@ label personality_test_conscientiousness:
 
     teacher "I appreciate your honesty."
     teacher "Understanding our desires influences how we approach tasks."
-    show teacher happy at scale(0.6), center
 
-    teacher "See you later in class."
-
-    stop music fadeout 4
+    call personality_test_outro
 
 default openness = 0
 
@@ -196,8 +189,7 @@ label personality_test_openness:
         "I avoid difficult words.":
             $ openness -= 1
 
-    show teacher happy at scale(0.6), center
-    teacher "Thanks for answering my questions."
+    teacher open smile "Thanks for answering my questions."
 
     if openness > 0:
         teacher "You’re {b}open{/b} to experiences."
@@ -213,11 +205,8 @@ label personality_test_openness:
 
     teacher "I appreciate your honesty."
     teacher "Openness to experience can lead to new ways of thinking."
-    show teacher happy at scale(0.6), center
 
-    teacher "See you later in class."
-
-    stop music fadeout 4
+    call personality_test_outro
 
     jump class_2
 
@@ -242,8 +231,7 @@ label personality_test_neuroticism:
         "My mood stays the same.":
             $ neuroticism -= 1
 
-    show teacher happy at scale(0.6), center
-    teacher "Thanks for answering my questions."
+    teacher open smile "Thanks for answering my questions."
 
     if neuroticism > 0:
         teacher "Based on my assessment, you’re {b}neurotic{/b}."
@@ -259,10 +247,7 @@ label personality_test_neuroticism:
 
     teacher "I appreciate your honesty."
     teacher "Too much of anything is bad for you,{w=0.1} so learning how to deal with one’s emotions is important for one’s mental health."
-    show teacher happy at scale(0.6), center
 
-    teacher "See you later in class."
-
-    stop music fadeout 4
+    call personality_test_outro
 
     jump before_class_5
