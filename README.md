@@ -25,6 +25,10 @@ Play the game on:
 - [Withoutpenorpaper](https://witpop.itch.io/sprite-pack-female-pink-hair)
 - [renpytom](https://github.com/renpy/renpy/tree/master/the_question/game/images)
 
+### Font
+
+- [Rudiment](https://www.1001fonts.com/rudiment-font.html?text=PSYCH%20101&size=9&fg=ffffff&bg=000000)
+
 ### Sound
 
 - [Bell](https://pixabay.com/sound-effects/bel-sekolah-153453/)
