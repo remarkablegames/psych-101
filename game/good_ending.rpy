@@ -1,7 +1,7 @@
 label good_ending:
     stop music fadeout 1
-    play music "tropical_house1_intro.ogg" fadein 4
-    queue music "tropical_house1_verse.ogg"
+    play music tropical_house1_intro fadein 4
+    queue music tropical_house1_verse
 
     show teacher very sad at scale(0.6), right
     with move
@@ -16,7 +16,7 @@ label good_ending:
     scene bg club
     with dissolve
 
-    queue music ["tropical_house1_intro.ogg", "tropical_house1_verse.ogg"]
+    queue music [tropical_house1_intro, tropical_house1_verse]
 
     show classmate smile at scale(0.9), left, flip
     with moveinleft

@@ -1,7 +1,7 @@
 ﻿default player_age = 0
 
 label start:
-    play music "lofi_intro.ogg" fadein 1.2
+    play music lofi_intro fadein 1.2
 
     "I see my psychology teacher walking up to me..."
 
@@ -11,7 +11,7 @@ label start:
     show teacher neutral at scale(0.6), center
     with dissolve
 
-    queue music "lofi_verse.ogg"
+    queue music lofi_verse
 
     teacher "Hi there!{w=0.2} What’s your name?"
 

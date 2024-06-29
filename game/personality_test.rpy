@@ -1,6 +1,6 @@
 label personality_test_intro(start=False):
     if not start:
-        queue music "lofi_verse.ogg"
+        queue music lofi_verse
 
         scene bg uni
         with fade

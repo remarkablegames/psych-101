@@ -2,7 +2,7 @@ label class_2:
     scene bg lecturehall
     with dissolve
 
-    queue music ["dark_intro.ogg", "dark_verse.ogg"]
+    queue music [dark_intro, dark_verse]
 
     "The next day, you enter the classroom and sit next to [classmate.name], who is still in a good mood."
 
@@ -33,8 +33,8 @@ label class_2:
     jump after_class_2
 
 label after_class_2:
-    queue music "sad1_intro.ogg"
-    queue music "sad1_verse.ogg"
+    queue music sad1_intro
+    queue music sad1_verse
 
     scene bg school
     with fade
@@ -76,8 +76,8 @@ label after_class_2_study:
     scene bg library
     with fade
 
-    play music "sad9_intro.ogg"
-    queue music ["sad9_verse.ogg", "sad9_hook.ogg"]
+    play music sad9_intro
+    queue music [sad9_verse, sad9_hook]
 
     show classmate smile at flip
     with dissolve

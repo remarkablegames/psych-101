@@ -1,5 +1,5 @@
 label before_class_5:
-    queue music "sad2_intro.ogg"
+    queue music sad2_intro
 
     scene bg living room night
     with fade
@@ -7,7 +7,7 @@ label before_class_5:
     "Later that evening, you check social media and see a post from [classmate.name]."
     classmate "“Sometimes I wonder if it’s all worth it.{w=0.4} Life just feels like one big mess.”"
 
-    queue music ["sad2_verse.ogg", "sad2_bridge.ogg"]
+    queue music [sad2_verse, sad2_bridge]
 
     menu:
         "Reach out to [classmate.name].":
@@ -29,8 +29,8 @@ label class_5:
     scene bg lecturehall
     with fade
 
-    queue music "tense_intro.ogg"
-    queue music "tense_verse.ogg"
+    queue music tense_intro
+    queue music tense_verse
 
     "You get to class the next day and notice that [classmate.name] is absent. The room feels tense."
     player "{alpha=0.7}{i}(thinking){/i}{/alpha}{w=0.1} Where’s [classmate.name]?{w=0.2} She said she’d be here today."

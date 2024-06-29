@@ -4,8 +4,8 @@ label class_4:
 
     show classmate sad at left
 
-    queue music "chill_intro.ogg"
-    queue music "chill_verse.ogg"
+    queue music chill_intro
+    queue music chill_verse
 
     "You notice [classmate.name] is quieter than usual."
 
@@ -32,8 +32,8 @@ label class_4:
     jump after_class_5
 
 label after_class_5:
-    queue music "sad1_intro.ogg"
-    queue music "sad1_verse.ogg"
+    queue music sad1_intro
+    queue music sad1_verse
 
     scene bg club
     with dissolve
@@ -93,7 +93,7 @@ label after_class_5_study:
     scene black
     with fade
 
-    play music "sad8_outro.ogg" fadein 1
+    play music sad8_outro fadein 1
 
     "You went back home to do some studying, but something doesn’t sit right with you."
     "You decide to shower and go to bed early."

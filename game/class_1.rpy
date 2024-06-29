@@ -1,7 +1,7 @@
 default affection = 0
 
 label class_1:
-    queue music ["dark_intro.ogg", "dark_verse.ogg"]
+    queue music [dark_intro, dark_verse]
 
     scene bg lecturehall
     with dissolve
@@ -54,7 +54,7 @@ label after_class_1:
 
     "You find yourself strolling with [classmate.name] after class."
 
-    queue music ["sad4_verse.ogg", "sad4_hook.ogg"]
+    queue music [sad4_verse, sad4_hook]
 
     show classmate smile
     with dissolve
@@ -90,7 +90,7 @@ label after_class_1:
             player "I find it interesting how animals can be conditioned to a stimulus."
             classmate "Indeed."
 
-    play sound "school_bell.ogg" volume 0.3
+    play sound school_bell volume 0.3
 
     "The school bell rings."
 
@@ -111,7 +111,7 @@ label after_class_1_break:
     scene bg restaurant
     with dissolve
 
-    play music ["sad8_verse.ogg", "sad8_hook.ogg"]
+    play music [sad8_verse, sad8_hook]
 
     "You and [classmate.name] make your way to the school’s cafeteria."
 
@@ -164,7 +164,7 @@ label after_class_1_study:
     scene black
     with fade
 
-    play music "sad8_outro.ogg" fadein 1
+    play music sad8_outro fadein 1
 
     "You went to the library and studied for a few hours."
     "Feeling exhausted, you decide to wrap up the session."
@@ -178,8 +178,8 @@ label after_class_1_hangout:
     scene bg park
     with dissolve
 
-    queue music "sad14_refrain.ogg"
-    queue music "sad14_hook.ogg"
+    queue music sad14_refrain
+    queue music sad14_hook
 
     show classmate surprised at flip, center
     with moveinbottom
@@ -199,8 +199,8 @@ label after_class_1_hangout:
     classmate "Thanks for inviting me. This is really nice."
     player "I’m glad you’re enjoying it."
 
-    queue music "sad14_intro.ogg"
-    queue music "sad14_verse.ogg"
+    queue music sad14_intro
+    queue music sad14_verse
 
     "You and [classmate.name] find a bench and sit down to rest for a while."
 
