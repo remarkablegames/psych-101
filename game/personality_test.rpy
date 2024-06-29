@@ -45,7 +45,7 @@ label personality_test_extraversion:
     menu:
         "Great! A chance to meet new people and have fun!":
             $ extraversion += 1
-        "I'll make an appearance, but won’t stay long.":
+        "I’ll make an appearance, but won’t stay long.":
             $ extraversion -= 1
 
     teacher "Noted.{w=0.2} Here’s the final question."

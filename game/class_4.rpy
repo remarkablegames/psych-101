@@ -73,7 +73,7 @@ label after_class_5_help:
     classmate "Buddy passed away."
 
     menu:
-        "Who's Buddy?":
+        "Who’s Buddy?":
             $ affection -= 1
             classmate "He’s my dog..."
             player "I’m sorry to hear."

@@ -31,13 +31,16 @@ label class_1:
     menu:
         "I’m here for the easy A.":
             $ affection -= 1
-            classmate "Haha, fair."
+            classmate "Haha, aren’t we all?"
 
         "I want to learn how psychology applies to our everyday lives.":
             $ affection += 1
-            classmate "Nice, that sounds exciting."
+            classmate @ surprised "Nice, that sounds exciting."
 
     "You continue to chat before the teacher interrupts you."
+
+    show classmate smile at left, scale(0.8)
+    with dissolve
 
     show teacher normal at scale(0.6), right
     with moveinright
@@ -52,7 +55,9 @@ label after_class_1:
     scene bg school
     with fade
 
-    "You find yourself strolling with [classmate.name] after class."
+    play sound school_bell volume 0.3
+
+    "After class, you take a stroll with [classmate.name] at the school campus."
 
     queue music [sad4_verse, sad4_hook]
 
@@ -66,15 +71,11 @@ label after_class_1:
     menu:
         "Agreed. Plus, I love dogs!":
             $ affection += 1
-            show classmate surprised
-            classmate "Amazing."
+            classmate @ surprised "Amazing."
 
-        "Eh, I thought it was boring. I'm also not a fan of dogs.":
+        "Eh, I thought it was boring. Also not a fan of dogs.":
             $ affection -= 1
-            show classmate sad
-            classmate "I see."
-
-    show classmate smile
+            classmate @ sad "I see."
 
     menu:
         "Ask [classmate.name] if she owns a pet.":
@@ -113,7 +114,7 @@ label after_class_1_break:
 
     play music [sad8_verse, sad8_hook]
 
-    "You and [classmate.name] make your way to the school’s cafeteria."
+    "You and [classmate.name] make way to the school’s cafeteria."
 
     show classmate smile
     with dissolve
@@ -125,10 +126,7 @@ label after_class_1_break:
 
         "I left my wallet back in class.":
             $ affection -= 1
-            show classmate surprised
-            classmate "No worries,{w=0.2} I got you."
-
-    show classmate smile
+            classmate @ surprised "No worries,{w=0.2} I got you."
 
     classmate "I’ll have a cupcake."
     classmate "What are you having?"
@@ -147,12 +145,9 @@ label after_class_1_break:
             $ affection += 1
             classmate "I enjoy reading and painting. It’s a good way to relax."
 
-        "Did you read the report that the amount of people diagnosed with a mental illness is increasing?":
+        "Did you hear that mental illness is on the rise?":
             $ affection -= 1
-            show classmate surprised
-            classmate "I haven’t. That’s worrisome."
-
-    show classmate smile
+            classmate @ surprised "I haven’t. That’s troubling."
 
     "As you spend more time with [classmate.name], you notice her mood is generally upbeat and positive."
 
