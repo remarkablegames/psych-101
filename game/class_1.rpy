@@ -14,7 +14,7 @@ label class_1:
     menu:
         "Introduce yourself.":
             $ affection += 1
-            player "Hi there!{w=0.1} Looks like we’re going to be seatmates."
+            player "Hi there!{w=0.1} Looks like we’re seatmates."
 
         "Say nothing.":
             $ affection -= 1
@@ -41,13 +41,13 @@ label class_1:
         "I want to learn how psychology applies to our everyday lives.":
             $ affection += 1
             classmate @ surprised "Nice, that sounds exciting."
-            classmate "I also want to learn how to be a stronger person by understanding my psychology."
+            classmate "I also want to learn how to be a better person by understanding psychology."
             player "How so?"
             classmate embarrassed "Like how to manage my emotions and think more optimistically."
             player "That’s a great goal."
             classmate smile "Haha, thanks."
 
-    "You chat for a bit more before the teacher interrupts you."
+    "You chat for a bit before the teacher interrupts you."
 
     show classmate smile at left, scale(0.8)
     with dissolve
@@ -62,13 +62,13 @@ label class_1:
     jump after_class_1
 
 label after_class_1:
-    scene bg school
+    scene bg uni
     with fade
 
     play sound school_bell volume 0.15
     queue music [sad4_verse, sad4_hook]
 
-    "After class ends, you take a quick stroll with [classmate.name] on the school campus."
+    "You stroll with [classmate.name] on the school campus after class."
 
     show classmate smile
     with dissolve
@@ -80,11 +80,11 @@ label after_class_1:
     menu:
         "Agreed. Plus, I love dogs!":
             $ affection += 1
-            classmate @ surprised "Amazing."
+            classmate @ surprised "Gear to hear!"
 
         "Eh, I thought it was boring. Also not a fan of dogs.":
             $ affection -= 1
-            classmate @ sad "I see."
+            classmate @ sad "I see..."
 
     menu:
         "Ask [classmate.name] if she owns a pet.":
@@ -94,15 +94,15 @@ label after_class_1:
             player "What’s his name?"
             classmate "His name is Buddy and he’s 13 years old."
             player "Isn’t that old in dog years?"
-            classmate "Yep, but he’s still going strong!{w=0.2} I can’t see myself without my best bud."
+            classmate @ surprised "Yep, but he’s still going strong!{w=0.2} I can’t see myself without my best bud."
 
         "Talk about class.":
             player "What did you think of the lesson?"
             classmate "Pretty good!{w=0.2} Just trying to keep up with everything."
-            player "It’s interesting how animals can be conditioned to a stimulus."
+            player "It’s interesting how animals can be conditioned."
             classmate surprised "Like how we can train dogs to do almost anything?"
-            player "Yeah, I wonder about the things we’re conditioned to that we don’t realize."
-            classmate smile "Good question.{w=0.2} It’s probably more than what is expected."
+            player "Yeah, I wonder what we’re conditioned to that we’re unaware of."
+            classmate smile "Good question.{w=0.2} Probably more than what you expect."
             player "For sure."
 
     menu:
@@ -124,15 +124,15 @@ label after_class_1_break:
 
     play music [sad8_verse, sad8_hook]
 
-    "You and [classmate.name] make way to the school’s cafeteria."
+    "You and [classmate.name] make way to the cafeteria."
 
-    show classmate smile
+    show classmate smile at left
     with dissolve
 
     menu:
         "What would you like? My treat.":
             $ affection += 1
-            classmate "Thanks."
+            classmate "Thanks!"
 
         "I left my wallet back in class.":
             $ affection -= 1
@@ -143,21 +143,39 @@ label after_class_1_break:
 
     menu:
         "Hot dog":
-            classmate "Delicious."
-
-        "Tacos":
             classmate "Yummy."
 
-    "After buying the food, you both find an empty table and starting chowing down."
+        "Tacos":
+            classmate "Delicious."
+
+    "After buying the food, you and [classmate.name] find a table and start chowing down."
+
+    show classmate smile at center, flip
+    with move
+
+    show classmate smile at center, ypos(1.25)
+    with move
 
     menu:
         "What do you like to do in your free time?":
             $ affection += 1
-            classmate "I enjoy reading and painting. It’s a good way to relax."
+            classmate "I enjoy reading and painting.{w=0.2} It’s a good way to relax."
+            player "What kind of genres do you read?"
+            classmate @ embarrassed "Mostly fiction and self-help."
+            player "Do you have any recommendations?"
+            classmate @ surprised "I really liked “Meditations” by Marcus Aurelius."
+            player "Thanks for the recommendation, I’ll take a look."
 
         "Did you hear that mental illness is on the rise?":
             $ affection -= 1
-            classmate @ surprised "I haven’t. That’s troubling."
+            classmate surprised "I haven’t,{w=0.1} that’s troubling to hear."
+            player "In 2021, more than 4 in 10 students felt persistently sad and nearly one-third experienced poor mental health."
+            classmate "Why do you think this is the case?"
+            player "I believe this is caused by the rise in social media,{w=0.1} the COVID-19 pandemic,{w=0.1} and societal pressures."
+            classmate "I see.{w=0.2} I hope things will get better."
+            player "Same."
+
+    show classmate smile
 
     "As you spend more time with [classmate.name], you notice her mood is generally upbeat and positive."
 
@@ -166,13 +184,17 @@ label after_class_1_break:
 label after_class_1_study:
     stop music fadeout 2
 
-    scene black
+    scene bg library
     with fade
 
     play music sad8_outro fadein 1
 
     "You went to the library and studied for a few hours."
     "Feeling exhausted, you decide to wrap up the session."
+
+    scene black
+    with fade
+
     "As you head back home, you bump into someone familiar."
 
     stop music fadeout 2
@@ -180,11 +202,11 @@ label after_class_1_study:
     jump after_class_1_hangout
 
 label after_class_1_hangout:
-    scene bg park
-    with dissolve
-
     queue music sad14_refrain
     queue music sad14_hook
+
+    scene bg park
+    with fade
 
     show classmate surprised at flip, center
     with moveinbottom
@@ -212,23 +234,24 @@ label after_class_1_hangout:
     show classmate smile at right
     with ease
 
-    menu:
-        "Have you thought about what you want to do in the future?":
-            $ affection += 1
-            show classmate embarrassed at right
-            classmate "I have some ideas, but I’m not sure yet."
-            player "Don’t worry{w=0.1}, you’re still young.{w=0.2} You have the time to figure things out."
-            show classmate smile at right
-            classmate "I hope so."
-            "You and [classmate.name] spent some time staring at clouds before parting ways."
+    show classmate smile at ypos(1.1)
+    with move
 
-        "You text your friends to see what they’re doing.":
+    menu:
+        "Ask Alex about her future.":
+            $ affection += 1
+            player "Have you thought about what you want to do in the future?"
+            classmate embarrassed "I have some ideas, but I’m not sure yet."
+            player "Don’t worry, you still have time to figure things out."
+            classmate smile "I hope so."
+            "You and [classmate.name] spend some time watching the clouds before parting ways."
+
+        "Text your friends to see what they’re doing.":
             $ affection -= 1
-            show classmate sad at right
-            classmate "Oh,{w=0.1} are you bored?{w=0.2} We can leave."
-            player "I have some errands I need to run."
-            classmate "Alright,{w=0.2} I’ll see you in class tomorrow."
-            "You and [classmate.name] then part ways for the day."
+            classmate sad "Oh,{w=0.1} are you bored?{w=0.2} We can leave."
+            player "I have some errands to run."
+            classmate "No worries,{w=0.1} I’ll see you in class tomorrow."
+            "You part ways and head home."
 
     stop music fadeout 4
 
