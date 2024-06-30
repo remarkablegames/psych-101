@@ -41,12 +41,13 @@ label good_ending:
     classmate "{alpha=0.7}{i}(smiling){/i}{/alpha}{w=0.1} Thanks for everything.{w=0.2} I really appreciate you being there for me."
     player "Anytime,{w=0.1} Alex.{w=0.2} We’re in this together."
 
-    scene bg school
+    scene bg uni
+    with dissolve
+
+    show classmate smile
     with dissolve
 
     "The school organizes a mental health awareness event. You and Alex participate, sharing your story to help others."
-
-    show classmate smile
 
     player "It’s important to reach out and support each other.{w=0.2} We can all make a difference."
 

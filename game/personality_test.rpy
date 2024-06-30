@@ -242,7 +242,6 @@ label personality_test_neuroticism:
 
     teacher "I appreciate your honesty."
     teacher "Too much of anything is bad for you,{w=0.1} so learning how to deal with one’s emotions is important for one’s mental health."
-    teacher "See you later."
 
-    stop music fadeout 2
+    call personality_test_outro
     return

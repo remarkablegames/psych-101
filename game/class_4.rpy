@@ -62,7 +62,7 @@ label after_class_5:
             "You feel it’s not in your place to stick your nose in [classmate.name]’s affairs."
             "Hopefully [classmate.name]’s situation will pass after a good night’s sleep."
 
-            jump after_class_5_study
+            jump after_class_5_home
 
 label after_class_5_help:
     show classmate upset at right, unflip
@@ -91,16 +91,39 @@ label after_class_5_help:
     player "It’s worth a try.{w=0.2} Sometimes talking to someone is enough and can make a difference."
     classmate "Thanks, I’ll keep that in mind."
 
-label after_class_5_study:
+label after_class_5_home:
     stop music fadeout 2
+    queue music sad2_intro
+
+    scene bg living room night
+    with fade
+
+    "Later that evening, you check social media and see a post from [classmate.name]."
+    classmate "“Sometimes I wonder if it’s all worth it.{w=0.4} Life just feels like one big mess.”"
+
+    queue music [sad2_verse, sad2_bridge]
+
+    menu:
+        "Reach out to [classmate.name].":
+            $ affection += 1
+            player "Hey [classmate.name],{w=0.1} I saw your post.{w=0.2} I’m really concerned about you.{w=0.2} Please,{w=0.1} let’s talk."
+            classmate ".{w=0.2}.{w=0.2}.{w=0.2}"
+            classmate "Thanks for reaching out.{w=0.2} I’m just really struggling right now."
+            player "Remember what we talked about today?{w=0.2} Maybe talking to the counselor could help.{w=0.1} I can go with you if you want."
+            classmate "Okay.{w=0.1} Maybe tomorrow."
+
+        "Ignore the post.":
+            $ affection -= 1
+
+    stop music fadeout 4
 
     scene black
     with fade
 
     play music sad8_outro fadein 1
 
-    "You went back home to do some studying, but something doesn’t sit right with you."
+    "You tried to do some studying at home, but something doesn’t sit right with you."
     "You decide to shower and go to bed early."
 
-    stop music fadeout 4
+    stop music fadeout 2
     jump before_class_5
