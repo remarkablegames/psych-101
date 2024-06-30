@@ -61,7 +61,7 @@ label class_1:
 
     teacher "Alright, class is starting.{w=0.2} Today we’re going to learn about Pavlov’s dog."
 
-    stop music fadeout 4
+    stop music fadeout 2
 
     jump after_class_1
 
@@ -120,7 +120,7 @@ label after_class_1:
             jump after_class_1_study
 
 label after_class_1_break:
-    stop music fadeout 4
+    stop music fadeout 2
 
     scene bg restaurant
     with dissolve

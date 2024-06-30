@@ -31,7 +31,7 @@ label class_4:
 
     "Class begins, but you can’t help but notice [classmate.name]’s distracted state.{w=0.2} The teacher discusses the importance of mental health awareness, which deeply resonates with you."
 
-    stop music fadeout 4
+    stop music fadeout 2
 
     jump after_class_5
 
@@ -115,7 +115,7 @@ label after_class_5_home:
         "Ignore the post.":
             $ affection -= 1
 
-    stop music fadeout 4
+    stop music fadeout 2
 
     scene black
     with fade

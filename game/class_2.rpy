@@ -32,7 +32,7 @@ label class_2:
 
     teacher "Class is starting.{w=0.2} Today we’re going to learn about the magical number seven plus or minus two."
 
-    stop music fadeout 4
+    stop music fadeout 2
 
     jump after_class_2
 
@@ -68,7 +68,7 @@ label after_class_2:
             jump after_class_2_study
 
 label after_class_2_study:
-    stop music fadeout 4
+    stop music fadeout 2
 
     scene bg library
     with fade
@@ -123,7 +123,7 @@ label after_class_2_study:
 
     "You and [classmate.name] spend a few more hours at the library before leaving feeling productive."
 
-    stop music fadeout 4
+    stop music fadeout 2
     jump after_class_2_home
 
 label after_class_2_home:
@@ -135,5 +135,5 @@ label after_class_2_home:
     "You went home and studied some more before going to bed."
     "You look forward to tomorrow’s psych class."
 
-    stop music fadeout 4
+    stop music fadeout 2
     jump before_class_3
