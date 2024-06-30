@@ -33,9 +33,9 @@ label class_4:
 
     stop music fadeout 2
 
-    jump after_class_5
+    jump after_class_4
 
-label after_class_5:
+label after_class_4:
     queue music sad1_intro
     queue music sad1_verse
 
@@ -54,7 +54,7 @@ label after_class_5:
         "Reach out to see if you can help.":
             $ affection += 1
 
-            jump after_class_5_help
+            jump after_class_4_help
 
         "Avoid being too nosy.":
             $ affection -= 3
@@ -62,9 +62,9 @@ label after_class_5:
             "You feel it’s not in your place to stick your nose in [classmate.name]’s affairs."
             "Hopefully [classmate.name]’s situation will pass after she gives it some time."
 
-            jump after_class_5_home
+            jump after_class_4_home
 
-label after_class_5_help:
+label after_class_4_help:
     show classmate upset at right, unflip
 
     player "Hey [classmate.name], is everything alright?"
@@ -91,7 +91,7 @@ label after_class_5_help:
     player "It’s worth a try.{w=0.2} Sometimes talking to someone is enough and can make a difference."
     classmate "Thanks, I’ll keep that in mind."
 
-label after_class_5_home:
+label after_class_4_home:
     stop music fadeout 2
     queue music sad2_intro
 
