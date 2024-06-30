@@ -143,20 +143,34 @@ label personality_test_conscientiousness:
 
     teacher "When it comes to chores,{w=0.2} what do you tend to do?"
     menu:
-        "Get them done right away.":
+        "Get them done immediately.":
             $ conscientiousness += 1
-        "Avoid doing them if possible.":
+        "Avoid doing them until the very last minute.":
             $ conscientiousness -= 1
-
     teacher "Interesting.{w=0.2} Next question."
+
+    teacher "How would others describe you?"
+    menu:
+        "A self-starter and dependable.":
+            $ conscientiousness += 1
+        "Laidback and free.":
+            $ conscientiousness -= 1
+    teacher "I see.{w=0.2} Let’s continue."
 
     teacher "After taking something out of the drawer,{w=0.2} what do you do once you’re done with it?"
     menu:
-        "I would put it back in its proper place.":
+        "Put it back in its proper place.":
             $ conscientiousness += 1
-        "I would leave it lying around.":
+        "Leave it lying around.":
             $ conscientiousness -= 1
+    teacher "Noted.{w=0.2} Here’s the final question."
 
+    teacher "Which statement do you agree with more?"
+    menu:
+        "Rules exist for a reason and should be followed whenever possible.":
+            $ conscientiousness += 1
+        "It’s better to go with the flow than stick to a schedule.":
+            $ conscientiousness -= 1
     teacher open smile "Thanks for answering my questions."
 
     if conscientiousness > 0:
@@ -165,7 +179,7 @@ label personality_test_conscientiousness:
 
     elif conscientiousness < 0:
         teacher "You scored low on {b}conscientiousness{/b}."
-        teacher "You’re laid back and don’t take obligations too seriously.{w=0.2} Procrastination is part of who you are."
+        teacher "You’re laidback and don’t take obligations too seriously.{w=0.2} Procrastination is part of who you are."
 
     else:
         teacher "You scored in the middle on {b}conscientiousness{/b}."
