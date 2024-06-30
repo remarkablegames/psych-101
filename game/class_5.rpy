@@ -1,4 +1,6 @@
 label before_class_5:
+    call personality_test_neuroticism
+
     queue music sad2_intro
 
     scene bg living room night

@@ -1,3 +1,7 @@
+label before_class_4:
+    call personality_test_agreeableness
+    jump class_4
+
 label class_4:
     scene bg lecturehall
     with dissolve
@@ -99,5 +103,4 @@ label after_class_5_study:
     "You decide to shower and go to bed early."
 
     stop music fadeout 4
-
-    jump personality_test_neuroticism
+    jump before_class_5

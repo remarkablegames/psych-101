@@ -23,7 +23,7 @@ label good_ending:
 
     "You and Alex visit the counselor together,{w=0.1} talking openly about Alex’s struggles.{w=0.2} The counselor provides resources and support."
 
-    show teacher happy at scale(0.7), right
+    show teacher laugh at scale(0.7), right
     with moveinright
 
     teacher "It’s great to see friends supporting each other.{w=0.2} Alex, we’re here for you.{w=0.2} Let’s work together to help you through this."

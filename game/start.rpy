@@ -32,4 +32,4 @@ label start:
 
     teacher "Welcome to Pysch 101!"
 
-    jump personality_test_extraversion
+    jump before_class_1

@@ -17,15 +17,13 @@ label personality_test_intro(start=False):
             pass
 
     show teacher smile
-
     return
 
 label personality_test_outro:
     teacher "See you later in class."
 
-    stop music fadeout 4
+    stop music fadeout 2
     play sound school_bell volume 0.15
-
     return
 
 default extraversion = 0
@@ -83,8 +81,7 @@ label personality_test_extraversion:
     teacher "Remember that knowing yourself is half the battle."
 
     call personality_test_outro
-
-    jump class_1
+    return
 
 default agreeableness = 0
 
@@ -125,8 +122,7 @@ label personality_test_agreeableness:
     teacher "Learning how to interact with others is key to subsisting in society."
 
     call personality_test_outro
-
-    jump class_5
+    return
 
 default conscientiousness = 0
 
@@ -207,8 +203,7 @@ label personality_test_openness:
     teacher "Openness to experience can lead to new ways of thinking."
 
     call personality_test_outro
-
-    jump class_2
+    return
 
 default neuroticism = 0
 
@@ -247,7 +242,7 @@ label personality_test_neuroticism:
 
     teacher "I appreciate your honesty."
     teacher "Too much of anything is bad for you,{w=0.1} so learning how to deal with one’s emotions is important for one’s mental health."
+    teacher "See you later."
 
-    call personality_test_outro
-
-    jump before_class_5
+    stop music fadeout 2
+    return

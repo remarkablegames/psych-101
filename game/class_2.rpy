@@ -1,3 +1,7 @@
+label before_class_2:
+    call personality_test_openness
+    jump class_2
+
 label class_2:
     scene bg lecturehall
     with dissolve
@@ -36,7 +40,7 @@ label after_class_2:
     queue music sad1_intro
     queue music sad1_verse
 
-    scene bg school
+    scene bg uni
     with fade
 
     "You find yourself strolling with [classmate.name] after class."
@@ -54,14 +58,7 @@ label after_class_2:
             classmate embarrassed "Even that might not be enough."
             "You and [classmate.name] walk away anxiously."
 
-            scene black
-            with fade
-
-            "You go home and study for a bit before heading to bed."
-
-            stop music fadeout 4
-
-            jump personality_test_agreeableness
+            jump after_class_2_home
 
         "Want to create flashcards together?":
             $ affection += 2
@@ -127,5 +124,16 @@ label after_class_2_study:
     "You and [classmate.name] spend a few more hours at the library before leaving feeling productive."
 
     stop music fadeout 4
+    jump after_class_2_home
 
-    jump personality_test_agreeableness
+label after_class_2_home:
+    play music sad8_outro fadein 1
+
+    scene black
+    with fade
+
+    "You went home and studied some more before going to bed."
+    "You look forward to tomorrow’s psych class."
+
+    stop music fadeout 4
+    jump before_class_3

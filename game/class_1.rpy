@@ -1,5 +1,9 @@
 default affection = 0
 
+label before_class_1:
+    call personality_test_extraversion
+    jump class_1
+
 label class_1:
     queue music [dark_intro, dark_verse]
 
@@ -65,7 +69,6 @@ label after_class_1:
     scene bg uni
     with fade
 
-    play sound school_bell volume 0.15
     queue music [sad4_verse, sad4_hook]
 
     "You stroll with [classmate.name] on the school campus after class."
@@ -253,6 +256,16 @@ label after_class_1_hangout:
             classmate "No worries,{w=0.1} I’ll see you in class tomorrow."
             "You part ways and head home."
 
-    stop music fadeout 4
+    jump after_class_1_home
 
-    jump personality_test_openness
+label after_class_1_home:
+    play music sad8_outro fadein 1
+
+    scene black
+    with fade
+
+    "You went home exhausted, took a quick shower, and fell asleep shortly after."
+    "You look forward to tomorrow’s psych class."
+
+    stop music fadeout 2
+    jump before_class_2
