@@ -39,7 +39,7 @@ label good_ending:
     with dissolve
 
     classmate "{alpha=0.7}{i}(smiling){/i}{/alpha}{w=0.1} Thanks for everything.{w=0.2} I really appreciate you being there for me."
-    player "Anytime,{w=0.1} Alex.{w=0.2} We’re in this together."
+    player "Anytime.{w=0.2} We’re in this together."
 
     scene bg uni
     with dissolve

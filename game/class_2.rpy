@@ -8,7 +8,7 @@ label class_2:
 
     queue music [dark_intro, dark_verse]
 
-    "The next day, you enter the classroom and sit next to [classmate.name], who is still in a good mood."
+    "You enter the classroom and sit next to [classmate.name], who’s still in a good mood."
 
     show classmate surprised at left
     pause 0.8
@@ -21,16 +21,22 @@ label class_2:
         "Good as well!":
             $ affection += 1
             classmate "Great to hear!"
+            player "Are you excited for today’s class?"
+            classmate "Yep, I’m looking forward to learning how to improve my memory."
+            player "Nice, this stuff will come useful during finals."
+            classmate "Agreed."
 
         "Could be better.":
-            $ affection -= 1
-            show classmate surprised at left, flip
-            classmate "Oh, anything you want to talk about?"
+            classmate surprised "Oh, anything you want to talk about?"
+            player "So-"
+
+    show classmate smile at left, scale(0.8)
+    with dissolve
 
     show teacher talking at scale(0.6), right
     with moveinright
 
-    teacher "Class is starting.{w=0.2} Today we’re going to learn about the magical number seven plus or minus two."
+    teacher "Class is starting.{w=0.2} Today we’re going to learn about the magical number 7 plus or minus 2."
 
     stop music fadeout 2
 
@@ -49,21 +55,27 @@ label after_class_2:
     with dissolve
 
     player "Need help with any subjects?"
-    classmate "Actually, yes. I’m struggling with our psychology assignment."
+    classmate "Actually, yes.{w=0.2} I’m struggling with our psychology assignment."
 
     menu:
-        "You need to spend more time studying.":
+        "Tell her that she’s not studying enough.":
             $ affection -= 1
 
-            classmate embarrassed "Even that might not be enough."
+            player "You have to study more."
+            classmate embarrassed "I hear you, but even that might not be enough."
+            player "I know, but there’s a correlation between how much time you study and your overall grades."
+            classmate "..."
+            player "Alright, I’m going to head home and study."
             "You and [classmate.name] walk away anxiously."
 
             jump after_class_2_home
 
-        "Want to create flashcards together?":
-            $ affection += 2
+        "Ask her if she wants to make flashcards.":
+            $ affection += 1
 
+            player "Want to create flashcards together?"
             classmate surprised "That’s a great idea!"
+            player "Let’s head to the library then."
 
             jump after_class_2_study
 
@@ -81,7 +93,7 @@ label after_class_2_study:
 
     "You and [classmate.name] begin making flashcards to study for the upcoming assignment on memory."
 
-    player "I believe in us. We got this. Okay, which one is first?"
+    player "Alright, we got this.{w=0.2} Let’s go over the first one."
 
     classmate "Let’s see...{w=0.2} How’s this for our first flashcard."
 
@@ -92,32 +104,36 @@ label after_class_2_study:
             classmate "That’s correct!"
 
         "False":
-            classmate surprised "No, that’s false.{w=0.1} Let’s go over that again later."
+            classmate surprised "No, that’s incorrect."
+            classmate "Semantic memory {i}is{/i} the component of long-term memory responsible for storing general world knowledge."
 
-    classmate smile "Okay,{w=0.1} here’s the next one."
+    classmate smile "Here’s the next one."
 
     menu:
-        "What are the three stages in the learning and memory process?"
+        "What are the 3 stages in the learning and memory process?"
 
         "Encoding, dispersal, and retrieval.":
-            classmate surprised "That’s incorrect.{w=0.2} The three stages are: {i}encoding{/i}, {i}storage{/i}, and {i}retrieval{/i}."
+            classmate surprised "That’s incorrect."
+            classmate "The 3 stages are: {i}encoding{/i}, {i}storage{/i}, and {i}retrieval{/i}."
 
         "Encoding, storage, and retrieval.":
-            classmate "That’s correct!{w=0.2} The three stages are: {i}encoding{/i}, {i}storage{/i}, and {i}retrieval{/i}."
+            classmate "That’s correct!"
 
         "Encoding, decoding, and formation.":
-            classmate surprised "That’s incorrect.{w=0.2} The three stages are: {i}encoding{/i}, {i}storage{/i}, and {i}retrieval{/i}."
+            classmate surprised "That’s incorrect."
+            classmate "The 3 stages are: {i}encoding{/i}, {i}storage{/i}, and {i}retrieval{/i}."
 
     classmate smile "How about this one?"
 
     menu:
-        "A memory-enhancing strategy, called {i}elaborative rehearsal{/i}, is a type of memory rehearsal that is useful in transferring information into long-term memory."
+        "A memory-enhancing strategy, called {i}elaborative rehearsal{/i}, is a type of memory rehearsal that’s useful in transferring information into long-term memory."
 
         "True":
-            classmate "Correct, you’re doing well!"
+            classmate "Correct!"
 
         "False":
-            classmate surprised "The correct answer is true."
+            classmate surprised "That’s incorrect."
+            classmate "Elaborative rehearsal {i}is{/i} a type of memory rehearsal that’s useful in transferring information into long-term memory."
 
     show classmate smile
 

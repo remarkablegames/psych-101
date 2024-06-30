@@ -71,7 +71,7 @@ label after_class_1:
 
     queue music [sad4_verse, sad4_hook]
 
-    "You stroll with [classmate.name] on the school campus after class."
+    "You find yourself strolling with [classmate.name] after class."
 
     show classmate smile
     with dissolve
@@ -115,7 +115,6 @@ label after_class_1:
             jump after_class_1_break
 
         "I have to go back and study.":
-            $ affection -= 1
             classmate "Alright,{w=0.1} see you later."
             jump after_class_1_study
 
@@ -170,7 +169,6 @@ label after_class_1_break:
             player "Thanks for the recommendation, I’ll take a look."
 
         "Did you hear that mental illness is on the rise?":
-            $ affection -= 1
             classmate surprised "I haven’t,{w=0.1} that’s troubling to hear."
             player "In 2021, more than 4 in 10 students felt persistently sad and nearly one-third experienced poor mental health."
             classmate "Why do you think this is the case?"

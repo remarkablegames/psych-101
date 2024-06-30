@@ -16,7 +16,7 @@ label class_5:
     with dissolve
 
     teacher "I was just informed of unfortunate news."
-    teacher "But one of our classmates took her own life last night."
+    teacher "One of our classmates took her own life last night."
     player "..."
     player "{alpha=0.7}{i}(thinking){/i}{/alpha}{w=0.1} No,{w=0.2} it can’t be her."
     teacher "For the privacy of the individual,{w=0.1} we’re unable to share any details.{w=0.1} Please be respectful for the time being."

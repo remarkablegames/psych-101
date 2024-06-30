@@ -37,7 +37,6 @@ label personality_test_extraversion:
             $ extraversion += 1
         "What a perfect excuse to cancel plans and stay at home!":
             $ extraversion -= 1
-
     teacher "Interesting.{w=0.2} Next question."
 
     teacher "You’re at a coffee shop.{w=0.2} The only available seat is in front of a stranger."
@@ -46,14 +45,14 @@ label personality_test_extraversion:
             $ extraversion += 1
         "I’ll down my drink and then head out.":
             $ extraversion -= 1
-    
-    teacher "Let’s continue.{w=0.2} You’re invited to a party where you only know the host."
+    teacher "I see.{w=0.2} Let’s continue."
+
+    teacher "You’re invited to a party where you only know the host."
     menu:
         "Great! A chance to meet new people and have fun!":
             $ extraversion += 1
         "I’ll make an appearance, but won’t stay long.":
             $ extraversion -= 1
-
     teacher "Noted.{w=0.2} Here’s the final question."
 
     teacher "You’re in a group project.{w=0.2} How do you prefer to work?"
@@ -62,7 +61,6 @@ label personality_test_extraversion:
             $ extraversion += 1
         "Divide the tasks so I can work on my part independently.":
             $ extraversion -= 1
-
     teacher open smile "Thanks for answering my questions."
 
     if extraversion > 0:
@@ -94,7 +92,6 @@ label personality_test_agreeableness:
             $ agreeableness += 1
         "Let the new person figure things out.":
             $ agreeableness -= 1
-
     teacher "Interesting.{w=0.2} Next question."
 
     teacher "If a colleague wanted to discuss life problems with you,{w=0.2} what’s your response?"
@@ -103,7 +100,22 @@ label personality_test_agreeableness:
             $ agreeableness += 1
         "Change the subject.":
             $ agreeableness -= 1
+    teacher "I see.{w=0.2} Let’s continue."
 
+    teacher "Which statement do you agree with more?"
+    menu:
+        "Having a good time is more important than winning.":
+            $ agreeableness += 1
+        "I’ll do whatever is necessary to get my way.":
+            $ agreeableness -= 1
+    teacher "Noted.{w=0.2} Here’s the final question."
+
+    teacher "How do others describe you?"
+    menu:
+        "Easygoing and friendly.":
+            $ agreeableness += 1
+        "Cold and blunt.":
+            $ agreeableness -= 1
     teacher open smile "Thanks for answering my questions."
 
     if agreeableness > 0:
@@ -119,7 +131,7 @@ label personality_test_agreeableness:
         teacher "You change your actions depending on the situation.{w=0.2} You have a realistic balance between selfish and selfless behavior."
 
     teacher "I appreciate your honesty."
-    teacher "Learning how to interact with others is key to subsisting in society."
+    teacher "Learning how to interact with others is key to living in society."
 
     call personality_test_outro
     return
@@ -169,22 +181,36 @@ default openness = 0
 label personality_test_openness:
     call personality_test_intro
 
-    teacher "What’s your thoughts on abstract ideas?"
+    teacher "Which statement do you agree with the most?"
     menu:
-        "I’m interested in abstract ideas.":
+        "Trying something new is exciting for me.":
             $ openness += 1
-        "I have difficulty understanding abstract ideas.":
+        "Time-tested ways of doing things are usually the best.":
             $ openness -= 1
-
     teacher "Interesting.{w=0.2} Next question."
 
-    teacher "How would you describe your speech?"
+    teacher "What’s your thoughts on philosophy?"
     menu:
-        "I have a rich vocabulary.":
+        "I enjoy complex discussions about philosophy.":
             $ openness += 1
-        "I avoid difficult words.":
+        "I tend to avoid discussions about philosophy.":
             $ openness -= 1
+    teacher "I see.{w=0.2} Let’s continue."
 
+    teacher "How’s your imagination?"
+    menu:
+        "My imagination can keep me entertained for hours.":
+            $ openness += 1
+        "I consider myself to be pretty unimaginative.":
+            $ openness -= 1
+    teacher "Noted.{w=0.2} Here’s the final question."
+
+    teacher "How do approach a cultural event in your town?"
+    menu:
+        "Look for novel activities to engage in.":
+            $ openness += 1
+        "Look for familiar events to participate in.":
+            $ openness -= 1
     teacher open smile "Thanks for answering my questions."
 
     if openness > 0:
@@ -214,18 +240,32 @@ label personality_test_neuroticism:
     menu:
         "I get stressed out easily.":
             $ neuroticism += 1
-        "I’m relaxed most of the time.":
+        "I feel calm and upbeat most of the time.":
             $ neuroticism -= 1
-
     teacher "Interesting.{w=0.2} Next question."
 
     teacher "How often does your mood change?"
     menu:
-        "I change my mood a lot.":
+        "I have frequent mood swings.":
             $ neuroticism += 1
-        "My mood stays the same.":
+        "My mood tends to stay the same.":
             $ neuroticism -= 1
+    teacher "I see.{w=0.2} Let’s continue."
 
+    teacher "How do you handle difficult challenges?"
+    menu:
+        "I usually give up once I encounter a serious obstacle.":
+            $ neuroticism += 1
+        "I believe in my ability to navigate challenges.":
+            $ neuroticism -= 1
+    teacher "Noted.{w=0.2} Here’s the final question."
+
+    teacher "Which statement best describes you?"
+    menu:
+        "It's easy for other people to get me riled up.":
+            $ neuroticism += 1
+        "I’m known as someone who’s stable during a crisis.":
+            $ neuroticism -= 1
     teacher open smile "Thanks for answering my questions."
 
     if neuroticism > 0:

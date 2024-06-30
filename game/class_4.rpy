@@ -24,12 +24,12 @@ label class_4:
             classmate "Thanks,{w=0.1} I appreciate it."
 
         "We all have tough weeks, you’ll get through it.":
-            $ affection -= 1
+            $ affection -= 2
             classmate "Yeah, I guess..."
 
     show teacher talking at scale(0.6), right
 
-    "Class begins, but you can’t help but notice [classmate.name]’s distracted state.{w=0.2} The teacher discusses the importance of mental health awareness, which deeply resonates with you."
+    "Class begins, but you can’t help but notice [classmate.name]’s distracted state.{w=0.2} The teacher discusses the importance of mental health, which deeply resonates with you."
 
     stop music fadeout 2
 
@@ -57,10 +57,10 @@ label after_class_5:
             jump after_class_5_help
 
         "Avoid being too nosy.":
-            $ affection -= 1
+            $ affection -= 3
 
             "You feel it’s not in your place to stick your nose in [classmate.name]’s affairs."
-            "Hopefully [classmate.name]’s situation will pass after a good night’s sleep."
+            "Hopefully [classmate.name]’s situation will pass after she gives it some time."
 
             jump after_class_5_home
 
@@ -72,18 +72,18 @@ label after_class_5_help:
     show classmate sad at scale(1), center
     with dissolve
 
-    classmate "It’s just...{w=0.3} everything feels so heavy...{w=0.3} My family is going through a lot, and I’ve been feeling really low."
+    classmate "It’s just...{w=0.3} everything feels so heavy...{w=0.3} I’m going through a lot, and I’ve been feeling really low."
     player "What happened?"
     classmate "Buddy passed away."
 
     menu:
         "Who’s Buddy?":
-            $ affection -= 1
+            $ affection -= 3
             classmate "He’s my dog..."
-            player "I’m sorry to hear."
+            player "Oh, I’m sorry to hear."
 
         "I’m sorry to hear.":
-            $ affection += 1
+            pass
 
     classmate "..."
     player "Have you considered talking to a school counselor?{w=0.2} They might be able to help."
@@ -113,7 +113,10 @@ label after_class_5_home:
             classmate "Okay.{w=0.1} Maybe tomorrow."
 
         "Ignore the post.":
-            $ affection -= 1
+            $ affection -= 5
+            "You decide to ignore [classmate.name]’s post."
+            "“Best not to be a nosy busybody, right?”"
+            "You feel things will be better after a good night’s rest."
 
     stop music fadeout 2
 
@@ -122,8 +125,9 @@ label after_class_5_home:
 
     play music sad8_outro fadein 1
 
-    "You tried to do some studying at home, but something doesn’t sit right with you."
+    "You tried to do some more studying, but something doesn’t feel right."
     "You decide to shower and go to bed early."
+    "After some tossing and turning, you eventually fell asleep."
 
     stop music fadeout 2
     jump before_class_5
