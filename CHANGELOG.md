@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/remarkablegames/psych-101/compare/v1.0.0...v1.0.1) (2024-07-01)
+
+
+### Continuous Integration
+
+* **github:** decrease web build size and fix gh release upload ([4c914f8](https://github.com/remarkablegames/psych-101/commit/4c914f8eba2f7dd0ce3aef59325938669c2af2d8))
+
 ## 1.0.0 (2024-06-30)
 
 ### Features
