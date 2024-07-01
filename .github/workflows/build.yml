@@ -28,10 +28,3 @@ jobs:
         with:
           branch: gh-pages
           folder: ../dist
-
-      - name: Upload artifacts
-        if: github.ref_name == 'master'
-        uses: actions/upload-artifact@v4
-        with:
-          name: web_build
-          path: ../dist
