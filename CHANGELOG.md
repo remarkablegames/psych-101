@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/remarkablegames/psych-101/compare/v1.0.1...v1.0.2) (2024-07-01)
+
+
+### Bug Fixes
+
+* **game:** correct misspelling in class 1 ([a66c1d0](https://github.com/remarkablegames/psych-101/commit/a66c1d07587f03ed2454b1065a41e77fc172ae96))
+
 ## [1.0.1](https://github.com/remarkablegames/psych-101/compare/v1.0.0...v1.0.1) (2024-07-01)
 
 
