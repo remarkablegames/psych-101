@@ -15,6 +15,8 @@ Play the game on:
 - [remarkablegames](https://remarkablegames.org/psych-101)
 - [itch.io](https://remarkablegames.itch.io/psych-101)
 
+Read the [blog post](https://remarkablegames.org/posts/psych-101/).
+
 ## Credits
 
 ### Art
