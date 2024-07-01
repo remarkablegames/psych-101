@@ -3,13 +3,13 @@ label before_class_4:
     jump class_4
 
 label class_4:
+    queue music chill_intro
+    queue music chill_verse
+
     scene bg lecturehall
     with dissolve
 
     show classmate sad at left
-
-    queue music chill_intro
-    queue music chill_verse
 
     "You notice [classmate.name] is quieter than usual."
 
@@ -31,11 +31,10 @@ label class_4:
 
     "Class begins, but you can’t help but notice [classmate.name]’s distracted state.{w=0.2} The teacher discusses the importance of mental health, which deeply resonates with you."
 
-    stop music fadeout 2
-
     jump after_class_4
 
 label after_class_4:
+    stop music fadeout 2
     queue music sad1_intro
     queue music sad1_verse
 
@@ -119,15 +118,13 @@ label after_class_4_home:
             "You feel things will be better after a good night’s rest."
 
     stop music fadeout 2
+    queue music sad8_outro fadein 1
 
     scene black
     with fade
-
-    play music sad8_outro fadein 1
 
     "You tried to do some more studying, but something doesn’t feel right."
     "You decide to shower and go to bed early."
     "After some tossing and turning, you eventually fell asleep."
 
-    stop music fadeout 2
     jump before_class_5

@@ -38,8 +38,8 @@ label class_1:
             classmate "Haha, aren’t we all?"
             classmate @ shy "But I hear the exams are pretty tough."
             player "Oh, I didn't know about that."
-            player "I enrolled since I saw the class ratings were pretty high."
-            classmate "We’ll get through it."
+            player "I thought it would be an easy class since the ratings were so high."
+            classmate "We’ll make it through."
             player "For sure!"
 
         "I want to learn how psychology applies to our everyday lives.":
@@ -61,15 +61,14 @@ label class_1:
 
     teacher "Alright, class is starting.{w=0.2} Today we’re going to learn about Pavlov’s dog."
 
-    stop music fadeout 2
-
     jump after_class_1
 
 label after_class_1:
+    stop music fadeout 2
+    queue music [sad4_verse, sad4_hook]
+
     scene bg uni
     with fade
-
-    queue music [sad4_verse, sad4_hook]
 
     "You find yourself strolling with [classmate.name] after class."
 
@@ -106,7 +105,7 @@ label after_class_1:
             classmate surprised "Like how we can train dogs to do almost anything?"
             player "Yeah, I wonder what we’re conditioned to that we’re unaware of."
             classmate smile "Good question.{w=0.2} Probably more than what you expect."
-            player "For sure."
+            player "Indeed."
 
     menu:
         "Want to grab a snack?":
@@ -120,11 +119,10 @@ label after_class_1:
 
 label after_class_1_break:
     stop music fadeout 2
+    queue music [sad8_verse, sad8_hook]
 
     scene bg restaurant
     with dissolve
-
-    play music [sad8_verse, sad8_hook]
 
     "You and [classmate.name] make way to the cafeteria."
 
@@ -163,10 +161,10 @@ label after_class_1_break:
             $ affection += 1
             classmate "I enjoy reading and painting.{w=0.2} It’s a good way to relax."
             player "What kind of genres do you read?"
-            classmate @ embarrassed "Mostly fiction and self-help."
+            classmate @ embarrassed "I’ve recently been into philosophy and self-help."
             player "Do you have any recommendations?"
             classmate @ surprised "I really liked “Meditations” by Marcus Aurelius."
-            player "Thanks for the recommendation, I’ll take a look."
+            player "Thanks for the recommendation, I’ll check it out."
 
         "Did you hear that mental illness is on the rise?":
             classmate surprised "I haven’t,{w=0.1} that’s troubling to hear."
@@ -184,11 +182,10 @@ label after_class_1_break:
 
 label after_class_1_study:
     stop music fadeout 2
+    queue music sad2_intro
 
     scene bg library
     with fade
-
-    play music sad8_outro fadein 1
 
     "You went to the library and studied for a few hours."
     "Feeling exhausted, you decide to wrap up the session."
@@ -198,11 +195,10 @@ label after_class_1_study:
 
     "As you head back home, you bump into someone familiar."
 
-    stop music fadeout 2
-
     jump after_class_1_hangout
 
 label after_class_1_hangout:
+    stop music fadeout 2
     queue music sad14_refrain
     queue music sad14_hook
 
@@ -243,9 +239,9 @@ label after_class_1_hangout:
             $ affection += 1
             player "Have you thought about what you want to do in the future?"
             classmate embarrassed "I have some ideas, but I’m not sure yet."
-            player "Don’t worry, you still have time to figure things out."
+            player "Don’t worry, you still have time."
             classmate smile "I hope so."
-            "You and [classmate.name] spend some time watching the clouds before parting ways."
+            "You and [classmate.name] watch the drifting clouds before parting ways."
 
         "Text your friends to see what they’re doing.":
             $ affection -= 1
@@ -257,7 +253,8 @@ label after_class_1_hangout:
     jump after_class_1_home
 
 label after_class_1_home:
-    play music sad8_outro fadein 1
+    stop music fadeout 2
+    queue music sad8_outro fadein 1
 
     scene black
     with fade
@@ -265,5 +262,4 @@ label after_class_1_home:
     "You went home exhausted, took a quick shower, and fell asleep shortly after."
     "You look forward to tomorrow’s psych class."
 
-    stop music fadeout 2
     jump before_class_2

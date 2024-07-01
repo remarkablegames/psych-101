@@ -1,6 +1,6 @@
 label good_ending:
     stop music fadeout 1
-    play music tropical_house1_intro fadein 4
+    queue music tropical_house1_intro fadein 2
     queue music tropical_house1_verse
 
     show teacher very sad at scale(0.6), right
@@ -38,7 +38,7 @@ label good_ending:
     show classmate smile
     with dissolve
 
-    classmate "{alpha=0.7}{i}(smiling){/i}{/alpha}{w=0.1} Thanks for everything.{w=0.2} I really appreciate you being there for me."
+    classmate "Thanks for everything.{w=0.2} I really appreciate you being there for me."
     player "Anytime.{w=0.2} We’re in this together."
 
     scene bg uni

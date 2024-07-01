@@ -3,11 +3,11 @@ label before_class_5:
     jump class_5
 
 label class_5:
-    scene bg lecturehall
-    with fade
-
     queue music tense_intro
     queue music tense_verse
+
+    scene bg lecturehall
+    with fade
 
     "You get to class the next day and notice that [classmate.name] is absent. The room feels tense."
     player "{alpha=0.7}{i}(thinking){/i}{/alpha}{w=0.1} Where’s [classmate.name]?{w=0.2} She said she’d be here today."

@@ -7,9 +7,9 @@ label bad_ending:
     scene bg funeral
     with fade
 
-    queue music sad3_verse
+    play music sad3_verse
 
-    "In the final scene, you stand alone at a grave, holding a bouquet of flowers."
+    "You stand alone at a grave, holding a bouquet of flowers."
 
     player "I brought you flowers."
     player "I’m sorry I wasn’t there for you."

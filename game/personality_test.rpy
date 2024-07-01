@@ -1,5 +1,6 @@
 label personality_test_intro(start=False):
     if not start:
+        stop music fadeout 2
         queue music lofi_verse
 
         scene bg school hallway
@@ -228,15 +229,15 @@ label personality_test_openness:
     teacher open smile "Thanks for answering my questions."
 
     if openness > 0:
-        teacher "You’re {b}open{/b} to experiences."
+        teacher "You’re {b}open to experiences{/b}."
         teacher "You’re a daydreamer who seeks new experiences and intellectual pursuits.{w=0.2} Curious about the world, you’re eager to learn new things."
 
     elif openness < 0:
-        teacher "You’re {b}closed{/b} to experiences."
+        teacher "You’re {b}closed to experiences{/b}."
         teacher "You’re down to earth and prefer familiar routines to new experiences.{w=0.2} You tend to be conventional with a narrower range of interests."
 
     else:
-        teacher "You’re somewhat {b}open{/b} to experiences."
+        teacher "You’re somewhat {b}open to experiences{/b}."
         teacher "You keep an open mind and are realistic about new things.{w=0.2} You find a happy medium between creativity and traditional thinking."
 
     teacher "I appreciate your honesty."

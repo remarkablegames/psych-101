@@ -3,10 +3,10 @@ label before_class_2:
     jump class_2
 
 label class_2:
+    queue music [dark_intro, dark_verse]
+
     scene bg lecturehall
     with dissolve
-
-    queue music [dark_intro, dark_verse]
 
     "You enter the classroom and sit next to [classmate.name], who’s still in a good mood."
 
@@ -27,8 +27,9 @@ label class_2:
             classmate "Agreed."
 
         "Could be better.":
-            classmate surprised "Oh, anything you want to talk about?"
-            player "So-"
+            classmate surprised "Oh, anything you’d like to talk about?"
+            player "Let me try to remember."
+            player "So today I-"
 
     show classmate smile at left, scale(0.8)
     with dissolve
@@ -38,13 +39,12 @@ label class_2:
 
     teacher "Class is starting.{w=0.2} Today we’re going to learn about the magical number 7 plus or minus 2."
 
-    stop music fadeout 2
-
     jump after_class_2
 
 label after_class_2:
-    queue music sad1_intro
-    queue music sad1_verse
+    stop music fadeout 2
+    queue music sad2_outro
+    queue music [sad2_hook, sad2_coda]
 
     scene bg uni
     with fade
@@ -55,14 +55,14 @@ label after_class_2:
     with dissolve
 
     player "Need help with any subjects?"
-    classmate "Actually, yes.{w=0.2} I’m struggling with our psychology assignment."
+    classmate embarrassed "Actually, yes.{w=0.2} I’m struggling with our psychology assignment."
 
     menu:
         "Tell her that she’s not studying enough.":
             $ affection -= 1
 
-            player "You have to study more."
-            classmate embarrassed "I hear you, but even that might not be enough."
+            player "You need to study more."
+            classmate "I hear you, but even that might not be enough."
             player "I know, but there’s a correlation between how much time you study and your overall grades."
             classmate "..."
             player "Alright, I’m going to head home and study."
@@ -81,12 +81,11 @@ label after_class_2:
 
 label after_class_2_study:
     stop music fadeout 2
+    queue music sad9_intro
+    queue music [sad9_verse, sad9_hook]
 
     scene bg library
     with fade
-
-    play music sad9_intro
-    queue music [sad9_verse, sad9_hook]
 
     show classmate smile at flip
     with dissolve
@@ -139,11 +138,11 @@ label after_class_2_study:
 
     "You and [classmate.name] spend a few more hours at the library before leaving feeling productive."
 
-    stop music fadeout 2
     jump after_class_2_home
 
 label after_class_2_home:
-    play music sad8_outro fadein 1
+    stop music fadeout 2
+    queue music sad8_outro fadein 1
 
     scene black
     with fade
@@ -151,5 +150,4 @@ label after_class_2_home:
     "You went home and studied some more before going to bed."
     "You look forward to tomorrow’s psych class."
 
-    stop music fadeout 2
     jump before_class_3
