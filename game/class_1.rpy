@@ -83,7 +83,7 @@ label after_class_1:
     menu:
         "Agreed. Plus, I love dogs!":
             $ affection += 1
-            classmate @ surprised "Gear to hear!"
+            classmate @ surprised "Great to hear!"
 
         "Eh, I thought it was boring. Also not a fan of dogs.":
             $ affection -= 1
