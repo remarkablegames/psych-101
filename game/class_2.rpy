@@ -43,11 +43,12 @@ label class_2:
 
 label after_class_2:
     stop music fadeout 2
-    queue music sad2_outro
-    queue music [sad2_hook, sad2_coda]
 
     scene bg uni
     with fade
+
+    queue music sad2_outro
+    queue music [sad2_hook, sad2_coda]
 
     "You find yourself strolling with [classmate.name] after class."
 
@@ -81,11 +82,12 @@ label after_class_2:
 
 label after_class_2_study:
     stop music fadeout 2
-    queue music sad9_intro
-    queue music [sad9_verse, sad9_hook]
 
     scene bg library
     with fade
+
+    queue music sad9_intro
+    queue music [sad9_verse, sad9_hook]
 
     show classmate smile at flip
     with dissolve
@@ -142,10 +144,11 @@ label after_class_2_study:
 
 label after_class_2_home:
     stop music fadeout 2
-    queue music sad8_outro fadein 1
 
     scene black
     with fade
+
+    queue music sad8_outro fadein 1
 
     "You went home and studied some more before going to bed."
     "You look forward to tomorrow’s psych class."

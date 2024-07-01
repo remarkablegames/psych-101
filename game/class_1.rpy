@@ -65,10 +65,11 @@ label class_1:
 
 label after_class_1:
     stop music fadeout 2
-    queue music [sad4_verse, sad4_hook]
 
     scene bg uni
     with fade
+
+    queue music [sad4_verse, sad4_hook]
 
     "You find yourself strolling with [classmate.name] after class."
 
@@ -119,10 +120,11 @@ label after_class_1:
 
 label after_class_1_break:
     stop music fadeout 2
-    queue music [sad8_verse, sad8_hook]
 
     scene bg restaurant
     with dissolve
+
+    queue music [sad8_verse, sad8_hook]
 
     "You and [classmate.name] make way to the cafeteria."
 
@@ -182,10 +184,11 @@ label after_class_1_break:
 
 label after_class_1_study:
     stop music fadeout 2
-    queue music sad2_intro
 
     scene bg library
     with fade
+
+    queue music sad2_intro
 
     "You went to the library and studied for a few hours."
     "Feeling exhausted, you decide to wrap up the session."
@@ -199,11 +202,12 @@ label after_class_1_study:
 
 label after_class_1_hangout:
     stop music fadeout 2
-    queue music sad14_refrain
-    queue music sad14_hook
 
     scene bg park
     with fade
+
+    queue music sad14_refrain
+    queue music sad14_hook
 
     show classmate surprised at flip, center
     with moveinbottom
@@ -254,10 +258,11 @@ label after_class_1_hangout:
 
 label after_class_1_home:
     stop music fadeout 2
-    queue music sad8_outro fadein 1
 
     scene black
     with fade
+
+    queue music sad8_outro fadein 1
 
     "You went home exhausted, took a quick shower, and fell asleep shortly after."
     "You look forward to tomorrow’s psych class."

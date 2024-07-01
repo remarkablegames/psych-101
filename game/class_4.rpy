@@ -35,11 +35,12 @@ label class_4:
 
 label after_class_4:
     stop music fadeout 2
-    queue music sad1_intro
-    queue music sad1_verse
 
     scene bg club
     with dissolve
+
+    queue music sad1_intro
+    queue music sad1_verse
 
     "Later in the hallway, you overhear [classmate.name] talking to another student."
 
@@ -92,10 +93,11 @@ label after_class_4_help:
 
 label after_class_4_home:
     stop music fadeout 2
-    queue music sad2_intro
 
     scene bg living room night
     with fade
+
+    queue music sad2_intro
 
     "Later that evening, you check social media and see a post from [classmate.name]."
     classmate "“Sometimes I wonder if it’s all worth it.{w=0.4} Life just feels like one big mess.”"
@@ -118,10 +120,11 @@ label after_class_4_home:
             "You feel things will be better after a good night’s rest."
 
     stop music fadeout 2
-    queue music sad8_outro fadein 1
 
     scene black
     with fade
+
+    queue music sad8_outro fadein 1
 
     "You tried to do some more studying, but something doesn’t feel right."
     "You decide to shower and go to bed early."
