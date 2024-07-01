@@ -8,11 +8,12 @@
 [![build](https://github.com/remarkablegames/psych-101/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/psych-101/actions/workflows/build.yml)
 [![lint](https://github.com/remarkablegames/psych-101/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/psych-101/actions/workflows/lint.yml)
 
-📖 Play as a student attending Psych 101 class.
+📖 Play as a student attending Psych 101 class!
 
 Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/psych-101)
+- [itch.io](https://remarkablegames.itch.io/psych-101)
 
 ## Credits
 
