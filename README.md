@@ -23,7 +23,7 @@ Read the [blog post](https://remarkablegames.org/posts/psych-101/).
 
 - [Homo Studio](https://unsplash.com/photos/a-blackboard-with-a-chalkboard-and-two-pens-on-it-iCyEPaLdPAs)
 - [Lia](https://liah0227.itch.io/hoshiko)
-- [Mugenjohncel](https://lemmasoft.renai.us/forums/viewtopic.php?t=17302)
+- [Uncle Mugen](https://lemmasoft.renai.us/forums/viewtopic.php?t=17302)
 - [Noraneko Games](https://noranekogames.itch.io/yumebackground)
 - [Withoutpenorpaper](https://witpop.itch.io/sprite-pack-female-pink-hair)
 - [renpytom](https://github.com/renpy/renpy/tree/master/the_question/game/images)
