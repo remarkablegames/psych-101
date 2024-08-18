@@ -1,4 +1,5 @@
-﻿default player_age = 0
+﻿default player_name = "Player"
+default player_age = 0
 
 label start:
     play music lofi_intro fadein 1.2
