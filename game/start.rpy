@@ -16,15 +16,13 @@ label start:
 
     teacher "Hi there!{w=0.2} What’s your name?"
 
-    python:
-        player_name = renpy.input("My name is...", length=32)
-        player_name = player_name.strip() or "Player"
+    $ player_name = renpy.input("My name is...", length=32).strip() or player_name
 
     teacher smile "Nice to meet you, [player_name]!"
 
     teacher "How old are you?"
 
-    $ player_age = int(renpy.input("My age is...", length=3, allow="0123456789") or 0)
+    $ player_age = int(renpy.input("My age is...", length=3, allow="0123456789") or player_age)
 
     if player_age < 18:
         teacher annoyed "You must be 18 years or older to attend Pysch 101."
