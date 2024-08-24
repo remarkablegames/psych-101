@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/remarkablegames/psych-101/compare/v1.0.2...v1.1.0) (2024-08-24)
+
+
+### Features
+
+* **gui:** replace window_icon ([a3abc15](https://github.com/remarkablegames/psych-101/commit/a3abc15e96cf66b68a82de911e6a22d0e3996bd1))
+
 ## [1.0.2](https://github.com/remarkablegames/psych-101/compare/v1.0.1...v1.0.2) (2024-07-01)
 
 
