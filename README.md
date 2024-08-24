@@ -82,6 +82,8 @@ renpy
 
 Press `Shift`+`R` to reload the game.
 
+Press `Shift`+`D` to display the developer menu.
+
 Clean the cache:
 
 ```sh
