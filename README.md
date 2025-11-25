@@ -4,7 +4,7 @@
 
 # Psych 101
 
-![release](https://img.shields.io/github/v/release/remarkablegames/psych-101)
+[![release](https://img.shields.io/github/v/release/remarkablegames/psych-101)](https://github.com/remarkablegames/psych-101/releases)
 [![build](https://github.com/remarkablegames/psych-101/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/psych-101/actions/workflows/build.yml)
 [![lint](https://github.com/remarkablegames/psych-101/actions/workflows/lint.yml/badge.svg)](https://github.com/remarkablegames/psych-101/actions/workflows/lint.yml)
 
@@ -12,8 +12,8 @@
 
 Play the game on:
 
-- [remarkablegames](https://remarkablegames.org/psych-101)
 - [itch.io](https://remarkablegames.itch.io/psych-101)
+- [remarkablegames](https://remarkablegames.org/psych-101)
 
 Read the [blog post](https://remarkablegames.org/posts/psych-101/).
 
