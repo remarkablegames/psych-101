@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/remarkablegames/psych-101/master/web-presplash.jpg" width="600px" alt="Psych 101">
+  <img src="web-presplash.jpg" width="600" alt="Psych 101">
 </p>
 
 # Psych 101
